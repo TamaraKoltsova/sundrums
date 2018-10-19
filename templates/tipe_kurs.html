@@ -1,0 +1,27 @@
+<!--==========================
+      Portfolio Section
+    ============================-->
+    <section id="portfolio"  class="section-bg" >
+      <div class="container">
+
+        <header class="section-header">
+          <h3 class="section-title">Посмотреть курс</h3>
+        </header>
+        <div class="row portfolio-container">
+{% for kurs in tipe_kurss %}
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="{{kurs.image.url}}" class="img-fluid" alt="">
+                <a href="{% url 'tipe_kurs_page' kurs.id %}" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="#">{{kurs.name}}</a></h4>
+              </div>
+            </div>
+          </div>
+{%endfor %}
+        </div>
+      </div>
+    </section><!-- #portfolio -->

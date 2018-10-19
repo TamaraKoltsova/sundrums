@@ -1,0 +1,42 @@
+ {%load static%} 
+    <section id="about">
+      <div class="container">
+
+        <header class="section-header">
+          <h3> О нас</h3>
+          <p>Обращение директора</p>
+        </header>
+
+        <div class="row about-cols">
+
+          <div  class=" col-md-4 wow fadeInUp">
+            <div style="border-radius: 600px; " class="about-col">
+              <div class="img">
+                <img style="border-radius: 350px; margin-top: 50px"  height="150px" width="350" src="{% static 'img/boos_ava.png'%}" alt="" class="img-fluid">
+                <div class="icon"><i class="fas fa-drum"></i></div>
+              </div>
+              <h2 class="title"><a href="#"></a></h2>
+              <p>
+               
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="about-col">
+              <div class="img">
+                <!-- <img src="{% static 'img/about-plan.jpg'%}" alt="" class="img-fluid">-->
+                  <!--<div class="icon"><i class="ion-ios-list-outline"></i></div>-->
+              </div>
+              <h2 class="title"><a href="#">{{boss_say.name}}</a></h2>
+              <p>
+                {{boss_say.description|safe}}
+              </p>
+            </div>
+          </div>
+
+      
+
+        </div>
+
+      </div>
+    </section><!-- #about -->

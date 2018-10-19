@@ -1,0 +1,54 @@
+{%extends "index.html"%}
+{%load static%}
+{% block content %}
+{%include "header.html"%}
+  <main id="main">
+
+<br /><br /><br /><br /><br />
+<!--  внимание класс del здесь для исчесзновения статьи --> 
+<div class="posts_and_video del">
+<section style="" id="call-to-action2" class="wow fadeIn ">
+<div  class="container">
+<div class="row">
+<div class="col-sm-3 col-sm-12">
+
+    
+  
+{{tipe_kurs_one.teacher_kurs.name}}
+
+{{tipe_kurs_one.info_kurs|safe}}</div>
+
+{%for kurs_post in tipe_kurs_one.postkurs.all%}
+ {{kurs_post.text}}
+  {{kurs_post.name}}
+   {{kurs_post.video_link}}
+{%endfor%}
+</div>
+</div>
+</section>
+</div>
+<br /><br /><br /><br /><br /><br />
+<input type="text" style="display: none ;"  name="password" id="password_before" value="{{password_from_bd_for_kurs}}">
+ <form id="password_test"  style="border: 1px solid #c00;"action="" class="form_password">
+ <div class="container">
+    <div class="row">
+    <div class="col-md-4"></div>
+        <div class="form-group text-center">
+        <label>для просмотра страницы введите пароль</label><br />
+            <input type="text"  name="password" id="password">
+            <button  id="submit_btn" class="btn btn-success"
+            data-password_from_bd="{{password_from_bd_for_kurs}}">
+            проверить пароль</button>
+        </div>
+    </div>
+ </div>    
+  </form>
+ <br /><br /><br /><br /><br /><br />
+{%include "write_us_wiget.html"%} 
+  </main>
+{%include "footer.html"%}
+
+
+
+
+{% endblock %}

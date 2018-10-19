@@ -1,0 +1,101 @@
+<!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact" class="section-bg wow fadeInUp">
+      <div class="container">
+
+        <div class="section-header">
+          <h3>Напишите Нам</h3>
+          <p>Записаться на занятия или купить нашу продукцию вы всегда можете нам написать</p>
+        </div>
+
+        <div class="row contact-info">
+
+          <div class="col-md-4">
+            <div class="contact-address">
+              <i class="ion-ios-location-outline"></i>
+              <h3>Адрес</h3>
+              <address>{{adres.name_rus}}</address>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="ion-ios-telephone-outline"></i>
+              <h3>телефон  </h3>
+              <p><a href="tel:{{telefon.name_rus}}">{{telefon.name_rus}}</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-email">
+              <i class="ion-ios-email-outline"></i>
+              <h3>Email</h3>
+              <p><a href="mailto:{{email.name_rus}}">{{email.name_rus}}</a></p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="form">
+          <div id="sendmessage">Your message has been sent. Thank you!</div>
+          <div id="errormessage"></div>
+          <form class="col s12" action="{% url 'mailer:send_product' %}" method="post" role="form" class="contactForm">
+            <input name="url" hidden="true" value="{{ request.build_absolute_uri }}">
+          <!--<form action="{%url 'massegers'%}" method="post" role="form" class="contactForm">-->
+          {%csrf_token%}
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Ваше имя" data-rule="minlen:4" data-msg="Пожайлуста введите не менее 4 символов" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Ваша Почта" data-rule="email" data-msg="Пожайлуста введите свою почту правильно" />
+                <div class="validation"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="tel" id="subject" placeholder="Телефон" data-rule="minlen:10" data-msg="телефон не менее 8 символов" />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+         
+                      <select style="border-radius: 0px;" name="topic" class="form-control" id="email" >
+                        <option>выберите тему</option>
+                        {% for topicmass in topics %}
+                        <option>{{topicmass.name|safe}}</option>
+                        {%endfor %}
+                      
+                      </select>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="sms" rows="5" data-rule="required" data-msg="сообщение не может быть пустым, кратко опишите что Вам нужно" placeholder="Ваше сообщение"></textarea>
+              <div class="validation"></div>
+            </div>
+            
+            
+            
+            <div id="add_button" class="text-center"><button class="button_send del" type="submit">отправить сообщение</button></div>
+            
+            
+            
+          </form>
+          <!-- + kapha -->
+<form id="kapha_test" action="" class="kapha_test ">
+ <div class="container">
+    <div class="row">
+        <div class="form-group">
+        <label> для отправки проверим, вы не робот? сложите два числа: <div class="two_number"  ></div></label><br />
+            <input type="text"  name="answer" id="answer" placeholder="">
+            <button  id="submit_btn" class="btn btn-success"
+            data-password_from_bd=""> проверить ответ
+            </button>
+        </div>
+    </div>
+ </div>    
+  </form>
+       <!-- - kapha -->    
+        </div>
+
+      </div>
+    </section><!-- #contact -->

@@ -1,0 +1,29 @@
+{%load static%}
+    <!--==========================
+      Clients Section
+    ============================-->
+    <section id="testimonials" class="section-bg wow fadeInUp">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Отзывы</h3>
+        </header>
+
+        <div class="owl-carousel testimonials-carousel">
+{% for reviewsmass in reviewss %}
+          <div class="testimonial-item">
+            <img src="{{reviewsmass.image.url}}" class="testimonial-img" alt="">
+            <h3>{{reviewsmass.name}}</h3>
+            <h4>{{reviewsmass.prof_reviewrs}}</h4>
+            <p>
+              <!--<img src="{% static 'img/quote-sign-left.png'%}" class="quote-sign-left" alt="">-->
+             "{{reviewsmass.text_review}}"<!--<img src="{% static 'img/quote-sign-right.png'%}" class="quote-sign-right" alt="">-->
+            </p>
+          </div>
+{%endfor %}
+        </div>
+
+      </div>
+    </section><!-- #testimonials -->
+    
+ 

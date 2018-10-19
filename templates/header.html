@@ -1,0 +1,43 @@
+{%load static%}
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container-fluid">
+
+      <div id="" class="pull-left">
+        <h1><a href="/" class="scrollto">
+            <img height="75px" src="{% static 'img/header2.png'%}"></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="#intro"><img src="{% static 'img/logo.png'%}" alt="" title="" /></a>-->
+      </div>
+
+     
+     <!-- +настраиваемое меню -->
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+         
+       <!-- menu -->  
+          <li class=""><a href="/">Главная</a></li>
+          
+ 
+
+
+
+         
+          {% for Post_categoriesmass in Post_categoriess %}
+            <li class="menu-has-children"><a href="{% url 'one_post' Post_categoriesmass.id %}">{{Post_categoriesmass.name}}</a>
+             <ul>
+              {% for post in Post_categoriesmass.post.all%}
+              <li><a href="{% url  'one_post_simple' post.id %}">{{post.name}}</a></li>
+              {%endfor%}
+            </ul>
+           {%endfor %} 
+           
+          </li>   
+        </ul>
+     <!-- - настраиваемое меню -->  
+        
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->

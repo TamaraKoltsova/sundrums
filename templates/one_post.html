@@ -1,0 +1,19 @@
+{%extends "index.html"%}
+{%load static%}
+{% block content %}
+{%include "header.html"%}
+  <main id="main">
+    <!--==========================
+      Portfolio Section
+    ============================-->
+<section style="" id="call-to-action2" class="wow fadeIn">
+<div  class="container">
+<div class="row">
+<div class="col-sm-3 col-sm-12">{{Post_categories_one.description|safe}}</div>
+</div>
+</div>
+</section>
+{%include "form_contact_us.html"%}
+  </main>
+{%include "footer.html"%}
+{% endblock %}

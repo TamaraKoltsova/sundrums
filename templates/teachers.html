@@ -1,0 +1,37 @@
+<!--==========================
+      Team Section
+    ============================-->
+    <section id="team">
+      <div class="container">
+        <div class="section-header wow fadeInUp">
+          <h3>Учителя</h3>
+          <p>Информация об учителях</p>
+        </div>
+
+        <div class="row">
+
+{% for teachermass in teachers %}
+          <div class="col-lg-3 col-md-6 wow fadeInUp">
+            <div class="member">
+              <img src="{{teachermass.image.url}}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>{{teachermass.name}}</h4>
+                  <span>{{teachermass.info}}</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href="">{{teachermass.tel}}</a>
+                     <a href=""> {{teachermass.email}}</a>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+{%endfor %}
+       
+        </div>
+
+      </div>
+    </section><!-- #team -->
