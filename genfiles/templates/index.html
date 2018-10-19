@@ -1,0 +1,11 @@
+вывод основных массивов
+""" begin slider mass"""
+{%for slidermass in sliders  %}
+      {{slidermass.name}}
+      {{slidermass.image}}
+      {{slidermass.description}}
+      {{slidermass.link}}
+      {{slidermass.is_active}}
+      {{slidermass.active_slide}}
+      {{slidermass.text_button}}
+{%endfor%}
