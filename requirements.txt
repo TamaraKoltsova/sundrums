@@ -13,7 +13,6 @@ PyInstaller==3.3.1
 PyPDF2==1.26.0
 pypiwin32==223
 pytz==2018.4
-pywin32==223
 reportlab==3.4.0
 six==1.11.0
 webencodings==0.5.1
