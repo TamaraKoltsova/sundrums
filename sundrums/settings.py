@@ -136,16 +136,16 @@ STATICFILES_DIRS = (
 )
 
 #для админки
-#STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 MEDIA_URL = '/media/'
-#MEDIA_ROOT = os.path.join(BASE_DIR, "static", "media")
+MEDIA_ROOT = os.path.join(BASE_DIR, "static", "media")
 
 #для админки в интернете 
 
 #STATIC_ROOT = os.path.join(BASE_DIR, "static",)
 
 #MEDIA_URL = '/media/'
-#STATIC_ROOT = '/home/django//static'
-#MEDIA_ROOT = '/home/django//media'
+STATIC_ROOT = '/home/django/sundrums/static'
+MEDIA_ROOT = '/home/django/sundrums/media'
 #MEDIA_ROOT = os.path.join(BASE_DIR, "static", "media")
 
