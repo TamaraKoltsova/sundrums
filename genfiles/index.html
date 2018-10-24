@@ -1,0 +1,7 @@
+вывод основных массивов
+""" begin contact mass"""
+{%for contactmass in contacts  %}
+      {{contactmass.name}}
+      {{contactmass.description}}
+      {{contactmass.is_active}}
+{%endfor%}

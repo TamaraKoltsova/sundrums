@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:/admin
+Host:151.248.126.240
+Sitemap:http://151.248.126.240/sitemap.xml
