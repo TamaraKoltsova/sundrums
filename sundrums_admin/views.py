@@ -79,7 +79,7 @@ def tipe_kurs_page(request, kurs_id ):
     tipe_kurs_one=tipe_kurs.objects.get(id =kurs_id)
     # получаем пароль и делаем защиту ввиде умножения на 3
     password_from_bd_for_kurs = int(tipe_kurs_one.password) * 3
-    print(password_from_bd_for_kurs)
+    #print(password_from_bd_for_kurs)
     return render(request, 'tipe_kurs_page.html', locals())
     
 def tipe_product_page(request, product_id ):
