@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-
+SECRET_KEY = '_w^=k7k358*d2n8vavp5er1t8l577uw#^3b^$p^&&mygdb!v%l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -103,6 +103,17 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+META_SITE_PROTOCOL = 'http'
+META_SITE_DOMAIN = '194.58.90.211'
+META_USE_TITLE_TAG = True
+META_USE_OG_PROPERTIES = True
+META_USE_TWITTER_PROPERTIES = True
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'sntppsundrums@gmail.com'
+EMAIL_HOST_PASSWORD = 's1234567890s'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
