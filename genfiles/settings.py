@@ -1,6 +1,6 @@
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SECRET_KEY = 't!4ef!iqcat5*4psh7t#4q497m@!)m3-0b28*2pp86p*__(&5'
+SECRET_KEY = '_w^=k7k358*d2n8vavp5er1t8l577uw#^3b^$p^&&mygdb!v%l'
 DEBUG = True
 ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = [
@@ -10,7 +10,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'sunbat_admin',
+    'sundrums_admin',
     'tinymce',
 ]
 MIDDLEWARE = [
@@ -22,7 +22,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-ROOT_URLCONF = 'sunbat.urls'
+ROOT_URLCONF = 'sundrums.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -38,7 +38,7 @@ TEMPLATES = [
         },
     },
 ]
-WSGI_APPLICATION = 'sunbat.wsgi.application'
+WSGI_APPLICATION = 'sundrums.wsgi.application'
 
 DATABASES = {
     'default': {
@@ -75,6 +75,6 @@ STATICFILES_DIRS = (
 MEDIA_URL = '/media/'
 #MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
 '''
-STATIC_ROOT = '/home/django/sunbat/static' 
-MEDIA_ROOT = '/home/django/sunbat/media
+STATIC_ROOT = '/home/django/sundrums/static/asset' 
+MEDIA_ROOT = '/home/django/sundrums/media
 ''' 

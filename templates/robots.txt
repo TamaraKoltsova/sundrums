@@ -1,4 +1,5 @@
 User-agent: *
 Disallow:/admin
+Disallow:/jember.ru
 Host:151.248.126.240
 Sitemap:http://151.248.126.240/sitemap.xml
