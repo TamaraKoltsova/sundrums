@@ -1,5 +1,18 @@
 User-agent: *
 Disallow:/admin
-Disallow:/jember.ru
+Disallow:/jembe.ru
+Disallow:/one_post
+Disallow:/ipe_posts
+Disallow:/one_post_simple
+Disallow:/tipe_kurs_page
+Disallow:/product_page/
+Disallow:/massegers/
+Disallow:/contact_p
+Disallow:contact_p/massegers/
+Disallow:/mailer/
+Disallow:/jembe.ru
 Host:151.248.126.240
 Sitemap:http://151.248.126.240/sitemap.xml
+
+
+
