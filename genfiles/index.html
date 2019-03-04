@@ -1,7 +1,52 @@
 вывод основных массивов
-""" begin contact mass"""
-{%for contactmass in contacts  %}
-      {{contactmass.name}}
-      {{contactmass.description}}
-      {{contactmass.is_active}}
+""" begin slider mass"""
+{%for slidermass in sliders  %}
+      {{slidermass.name}}
+      {{slidermass.image}}
+      {{slidermass.description}}
+      {{slidermass.link}}
+      {{slidermass.is_active}}
+      {{slidermass.active_slide}}
+      {{slidermass.text_button}}
+{%endfor%}
+""" begin helful_information mass"""
+{%for helful_informationmass in helful_informations  %}
+      {{helful_informationmass.name}}
+      {{helful_informationmass.description}}
+      {{helful_informationmass.english_name}}
+      {{helful_informationmass.is_active}}
+      {{helful_informationmass.text}}
+{%endfor%}
+""" begin product_categ mass"""
+{%for product_categmass in product_categs  %}
+      {{product_categmass.name}}
+      {{product_categmass.name_for_english}}
+{%endfor%}
+""" begin product_one mass"""
+{%for product_onemass in product_ones  %}
+      {{product_onemass.name}}
+      {{product_onemass.image}}
+      {{product_onemass.description}}
+      {{product_onemass.categories}}
+{%endfor%}
+""" begin type_work mass"""
+{%for type_workmass in type_works  %}
+      {{type_workmass.name}}
+      {{type_workmass.image}}
+      {{type_workmass.desctioption1}}
+      {{type_workmass.desctioption2}}
+      {{type_workmass.is_active}}
+      {{type_workmass.kewords}}
+      {{type_workmass.descriptions_seo}}
+{%endfor%}
+""" begin type_work_one mass"""
+{%for type_work_onemass in type_work_ones  %}
+      {{type_work_onemass.name}}
+      {{type_work_onemass.text_for_info}}
+      {{type_work_onemass.ed_izmerenia}}
+      {{type_work_onemass.price}}
+      {{type_work_onemass.type_work}}
+      {{type_work_onemass.is_active}}
+      {{type_work_onemass.kewords}}
+      {{type_work_onemass.description}}
 {%endfor%}

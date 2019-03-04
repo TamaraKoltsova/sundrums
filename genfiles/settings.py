@@ -1,6 +1,6 @@
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SECRET_KEY = '_w^=k7k358*d2n8vavp5er1t8l577uw#^3b^$p^&&mygdb!v%l'
+SECRET_KEY = '-o#zl6zktmm6b!n1pg(nva5*19hgr=y%zg(22r^++m9t(^#=4m'
 DEBUG = True
 ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = [
@@ -10,7 +10,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'sundrums_admin',
+    'goststroi_admin',
     'tinymce',
 ]
 MIDDLEWARE = [
@@ -22,7 +22,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-ROOT_URLCONF = 'sundrums.urls'
+ROOT_URLCONF = 'goststroi.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -38,7 +38,7 @@ TEMPLATES = [
         },
     },
 ]
-WSGI_APPLICATION = 'sundrums.wsgi.application'
+WSGI_APPLICATION = 'goststroi.wsgi.application'
 
 DATABASES = {
     'default': {
@@ -75,6 +75,6 @@ STATICFILES_DIRS = (
 MEDIA_URL = '/media/'
 #MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
 '''
-STATIC_ROOT = '/home/django/sundrums/static/asset' 
-MEDIA_ROOT = '/home/django/sundrums/media
+STATIC_ROOT = '/home/django/goststroi/static/asset' 
+MEDIA_ROOT = '/home/django/goststroi/media
 ''' 

@@ -6,7 +6,7 @@ from django.urls import path
 from django.views.generic import TemplateView
 urlpatterns = [
 path('admin/', admin.site.urls), 
-url(r'^', include('sundrums_admin.urls')), 
+url(r'^', include('goststroi_admin.urls')), 
 url(r'^tinymce/', include('tinymce.urls')), 
 path(r'robots.txt', TemplateView.as_view(template_name='robots.txt', content_type='text/plain'),name='robots.txt')
 ]\
