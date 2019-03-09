@@ -10,7 +10,7 @@ from django.core.mail import send_mail
 #verstalhiki@gmail.ru
 
 def send_product(request):
-    if self.request.recaptcha_is_valid:
+    if request.recaptcha_is_valid:
         msg = ' %s \n    %s \n %s \n %s \n  %s \n  %s \n '%(request.POST['url'], request.POST['name'], request.POST['tel'], request.POST['email'], request.POST['topic'], request.POST['sms'])
         send_mail(u'Вам тестовое сообщение с сайта sundrums.ru', msg , settings.EMAIL_HOST_USER, ['Sundrums@mail.ru'], fail_silently=False)    
     return HttpResponse(u'Ваша заявка была отправлена')
