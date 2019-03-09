@@ -14,7 +14,7 @@ def send_product(request):
         msg = ' %s \n    %s \n %s \n %s \n  %s \n  %s \n '%(request.POST['url'], request.POST['name'], request.POST['tel'], request.POST['email'], request.POST['topic'], request.POST['sms'])
         send_mail(u'Вам тестовое сообщение с сайта sundrums.ru', msg , settings.EMAIL_HOST_USER, ['Sundrums@mail.ru'], fail_silently=False)
     else:
-        return HttpResponse(u'вы не прошли проверку я не робот')        
+        return HttpResponse(u'Пожайлуста пройдите проверку reCAPTCHA')        
     return HttpResponse(u'Ваша заявка была отправлена')
     
 ''''def send_product_spec(request):
