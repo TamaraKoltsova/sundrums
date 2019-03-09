@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'sundrums_admin',
     'tinymce',
     'mailer',
+    'requests',
 ]
 
 MIDDLEWARE = [
