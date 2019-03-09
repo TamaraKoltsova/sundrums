@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect, HttpResponse
+from .decorators import check_recaptcha
 from . models import *
 # обычная загрузка вида
 def index(request):
@@ -124,8 +125,10 @@ def massegers(request):
     from_form_masseger= data.get("sms")
     from_form_topic= data.get("topic")
     new_masseger= masseger( name = from_form_name, mail = from_form_email,  tel = from_form_tel, sms = from_form_masseger, subject = from_form_topic)
-    new_masseger.save()
-    print("send!!!!!")
+    # проверка валидности reCAPTCHA
+    if self.request.recaptcha_is_valid:
+        new_masseger.save()
+    #print("send!!!!!")
     return HttpResponse(u'Ваша заявка была отправлена')
     #return render(request, 'good_massege.html', locals())  
         

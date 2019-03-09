@@ -73,14 +73,20 @@
               <div class="validation"></div>
             </div>
             
-            
+            <script src='https://www.google.com/recaptcha/api.js'></script>
+        <div class="form-group g-recaptcha" data-sitekey="6LdWjZYUAAAAABYRVazd6fkWgsx9l1xJf5fKaF7b"></div>
+        {% if messages %}
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+        {% endif %}
             
             <div id="add_button" class="text-center"><button class="button_send del" type="submit">отправить сообщение</button></div>
             
             
             
           </form>
-          <!-- + kapha -->
+          <!-- + kapha 
 <form id="kapha_test" action="" class="kapha_test ">
  <div class="container">
     <div class="row">
