@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect, HttpResponse
 
-from  models import *
+from  .models import *
 # обычная загрузка вида
 def index(request):
     boss_say = helful_information.objects.get(english_name = 'boss_say')
