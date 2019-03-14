@@ -26,7 +26,7 @@
 
          
           {% for Post_categoriesmass in Post_categoriess %}
-            <li class="menu-has-children"><a  style="font-size: 12pt;" href="{% url 'one_post' Post_categoriesmass.id %}">{{Post_categoriesmass.name}}</a>
+            <li class="menu-has-children"><a  style="font-size: 8pt;" href="{% url 'one_post' Post_categoriesmass.id %}">{{Post_categoriesmass.name}}</a>
              <ul>
               {% for post in Post_categoriesmass.post.all%}
               <li><a href="{% url  'one_post_simple' post.id %}">{{post.name}}</a></li>
