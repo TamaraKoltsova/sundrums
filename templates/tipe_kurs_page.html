@@ -19,7 +19,7 @@
 {%for kurs_post in tipe_kurs_one.postkurs.all%}
  {{kurs_post.text|safe}}
   {{kurs_post.name}}
-   {{kurs_post.video_link}}
+   {{kurs_post.video_link|safe}}
 {%endfor%}
 </div>
 </div>
