@@ -17,8 +17,8 @@
 {{tipe_kurs_one.teacher_kurs.name}}
 {{tipe_kurs_one.info_kurs|safe}} </div>
 {%for kurs_post in tipe_kurs_one.postkurs.all%}
- {{kurs_post.text|safe}}
-  {{kurs_post.name}}
+ {{kurs_post.text|safe}}<br />
+  {{kurs_post.name}}<br />
    {{kurs_post.video_link|safe}}
 {%endfor%}
 </div>
