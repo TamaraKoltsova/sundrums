@@ -137,7 +137,7 @@ class socbutton(models.Model):
         
 class kurs_video(models.Model):
       name = models.CharField(max_length = 64, blank=True,   null=True, default='', verbose_name= 'имя видео' )
-      video_link = models.CharField(max_length = 64, blank=True,   null=True, default='', verbose_name= 'ссылка на видео из ютуба' )
+      video_link = models.CharField(max_length = 4064, blank=True,   null=True, default='', verbose_name= 'ссылка на видео из ютуба' )
       tipe_kurs = models.ForeignKey(tipe_kurs, on_delete=models.SET_NULL, related_name = 'postkurs',     null=True, default='', verbose_name= 'в какой курс добавлять' )
       text = HTMLField(                verbose_name= ' текст статьи поста ' )
       def __str__(self):
