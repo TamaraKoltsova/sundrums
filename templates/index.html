@@ -31,7 +31,7 @@
 {% for Post_categoriesmass in Post_categoriess %}
           <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
             <div class="portfolio-wrap">
-              <figure style="height: 90%;">
+              <figure >
                 <img src="{{Post_categoriesmass.image.url}}" class="img-fluid" alt="">
                 <a style="margin-right: 20px;" href="{% url 'tipe_posts' Post_categoriesmass.id %}" class="link-details" title="посмотреть {{Post_categoriesmass.name}}"><i  class="ion ion-eye"></i></a>
               </figure>
