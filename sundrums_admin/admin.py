@@ -255,3 +255,16 @@ admin.site.register(product_video, product_videoAdmin )
 
 
 
+''' Модель product_video'''
+
+class for_img_loadAdmin (admin.ModelAdmin):
+      list_display = [field.name for field in for_img_load._meta.fields]
+      #fields = []
+      #exclude = ['']
+      #list_fields = ['']
+      #searh_fields = ['']
+      class Meta:
+        model = for_img_load
+
+admin.site.register(for_img_load, for_img_loadAdmin )
+''' конец Модели product_video''' 

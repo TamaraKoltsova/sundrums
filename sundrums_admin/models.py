@@ -180,4 +180,14 @@ class product_video(models.Model):
        return "статья с видео для товаров: %s" % (self.name)
       class Meta:
         verbose_name = 'статья с видео для товара'
-        verbose_name_plural = 'статьи с видео для товара'                    
+        verbose_name_plural = 'статьи с видео для товара' 
+        
+class for_img_load(models.Model):
+      name = models.CharField(      max_length = 64, blank=True,   null=True, default='', verbose_name= ' фио кто оставил отзыв' )
+      image = models.ImageField(      blank=True,    upload_to='static/media/reviews_images/', help_text = 'фото',   verbose_name=  'фото оставившего отзыв' )
+      is_active = models.BooleanField(              default='True', verbose_name= 'вкл? ' )
+      def __str__(self):
+       return "картинки для загрузки в редактор: %s" % (self.name)
+      class Meta:
+        verbose_name = 'картинку для загрузки в редактор'
+        verbose_name_plural = 'картинки для загрузки в редактор'                           

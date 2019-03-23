@@ -27,7 +27,7 @@
                 <a href="{% url  'one_post_simple' Post_categoriesmass.id %}" class="link-details" title="More Details"><i class="ion ion-eye"></i></a>
               </figure>
               <div class="portfolio-info">
-                <h4><a href="#">{{Post_categoriesmass.name}}</a></h4>
+                <h4><a href="{% url  'one_post_simple' Post_categoriesmass.id %}">{{Post_categoriesmass.name}}</a></h4>
                 <p>{{Post_categoriesmass.description_for_main}}</p>
               </div>
             </div>
