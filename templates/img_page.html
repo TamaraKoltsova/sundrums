@@ -1,0 +1,9 @@
+{%extends "base.html"%}
+{%load static%}
+{% block content %}
+
+{%for img in img_load_mass %}
+ <img src="{{img.image.url}}" />
+{%endfor%}
+
+{% endblock %}

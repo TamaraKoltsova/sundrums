@@ -134,4 +134,7 @@ def massegers(request):
     #return render(request, 'good_massege.html', locals())  
         
   
-    
+   
+def img_load(request):
+    img_load_mass = for_img_load.objects.filter(is_active=True)
+    return render(request, 'img_page.html', locals())
