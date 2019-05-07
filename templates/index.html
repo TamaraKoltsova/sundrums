@@ -29,19 +29,22 @@
         </header>
         <div class="row portfolio-container">
 {% for Post_categoriesmass in Post_categoriess %}
+         
+         <a  href="{% url 'tipe_posts' Post_categoriesmass.id %}" class="link-details" title="посмотреть {{Post_categoriesmass.name}}">
           <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
             <div class="portfolio-wrap">
               <figure >
                 <img src="{{Post_categoriesmass.image.url}}" class="img-fluid" alt="">
-                <a style="margin-right: 20px;" href="{% url 'tipe_posts' Post_categoriesmass.id %}" class="link-details" title="посмотреть {{Post_categoriesmass.name}}"><i  class="ion ion-eye"></i></a>
+                <!--<a style="margin-right: 20px;" href="{% url 'tipe_posts' Post_categoriesmass.id %}" class="link-details" title="посмотреть {{Post_categoriesmass.name}}"><i  class="ion ion-eye"></i></a>-->
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="{% url 'tipe_posts' Post_categoriesmass.id %}">{{Post_categoriesmass.name}}</a></h4>
+                <h4><!--<a href="{% url 'tipe_posts' Post_categoriesmass.id %}">{{Post_categoriesmass.name}}</a>--></h4>
                 <p>{{Post_categoriesmass.descriptions_for_main}}</p>
               </div>
             </div>
           </div>
+          </a>
 {%endfor %}
         </div>
       </div>
