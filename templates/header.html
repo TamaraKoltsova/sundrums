@@ -20,7 +20,7 @@
         <ul class="nav-menu">
          
        <!-- menu -->  
-          <li class=""><a style="color: #F09120;" href="/">Главная</a></li>
+          <li class=""><a style="color: #FCD362;" href="/">Главная</a></li>
           
  
 
@@ -28,7 +28,7 @@
 
          
           {% for Post_categoriesmass in Post_categoriess %}
-            <li class="menu-has-children"><a style="color: #F09120;"   style="font-size: 8pt;" href="{% url 'tipe_posts' Post_categoriesmass.id %}">{{Post_categoriesmass.name}}</a>
+            <li class="menu-has-children"><a style="color: #FCD362;"   style="font-size: 8pt;" href="{% url 'tipe_posts' Post_categoriesmass.id %}">{{Post_categoriesmass.name}}</a>
              <ul>
               {% for post in Post_categoriesmass.post.all%}
               <li><a  href="{% url  'one_post_simple' post.id %}">{{post.name}}</a></li>
