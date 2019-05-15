@@ -12,18 +12,21 @@
         </header>
         <div class="row portfolio-container">
 {% for prod in categ.product.all %}
+<a style="margin-right: 20pt;" href="{% url 'product_page' prod.id %}" 
+class="link-details" title="More Details">
+              
           <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
             <div class="portfolio-wrap">
-              <figure style="height: 90%;">
+              <fgure style="height: 90%;">
                 <img src="{{prod.image.url}}" class="img-fluid" alt="">
-                <a style="margin-right: 20pt;" href="{% url 'product_page' prod.id %}" class="link-details" title="More Details"><i class="ion ion-eye"></i></a>
-              </figure>
+              </fgure>
 
               <div class="portfolio-info">
-                <h4><a href="{% url 'product_page' prod.id %}">{{prod.name}}</a></h4>
+                <h4>{{prod.name}}</h4>
               </div>
             </div>
           </div>
+          </a>
 {%endfor %}
         </div>
       </div>

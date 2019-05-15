@@ -9,18 +9,20 @@
         </header>
         <div class="row portfolio-container">
 {% for kurs in tipe_kurss %}
+          <a style="margin-right: 20px;" href="{% url 'tipe_kurs_page' kurs.id %}" class="link-details" title="More Details">
           <div  class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
             <div class="portfolio-wrap">
-              <figure style="height: 90%;">
+              <fgure style="height: 90%;">
                 <img src="{{kurs.image.url}}" class="img-fluid" alt="">
-                <a style="margin-right: 20px;" href="{% url 'tipe_kurs_page' kurs.id %}" class="link-details" title="More Details"><i class="ion ion-eye"></i></a>
-              </figure>
+                
+              </fgure>
 
               <div class="portfolio-info">
-                <h4><a href="{% url 'tipe_kurs_page' kurs.id %}">{{kurs.name}}</a></h4>
+                <h4>{{kurs.name}}<!--<a href="{% url 'tipe_kurs_page' kurs.id %}">{{kurs.name}}</a>--></h4>
               </div>
             </div>
           </div>
+          </a>
 {%endfor %}
         </div>
       </div>
