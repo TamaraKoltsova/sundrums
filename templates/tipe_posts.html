@@ -15,23 +15,26 @@
         </header>
         <div class="row portfolio-container">
 {% for Post_categoriesmass in  Post_categories_tipe %}
+            <a href="{% url  'one_post_simple' Post_categoriesmass.id %}" class="link-details" title="More Details">
+              
           <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
             <div class="portfolio-wrap">
               <figure style="height: 90%;">
               {% if Post_categoriesmass.image %}
-                 <img src="{{Post_categoriesmass.image.url}}">
+                 <img alt="{{Post_categoriesmass.name}}" title="{{Post_categoriesmass.name}}" src="{{Post_categoriesmass.image.url}}">
                      {% else %}
   
               {% endif %}
                 
-                <a href="{% url  'one_post_simple' Post_categoriesmass.id %}" class="link-details" title="More Details"><i class="ion ion-eye"></i></a>
               </figure>
               <div class="portfolio-info">
-                <h4><a href="{% url  'one_post_simple' Post_categoriesmass.id %}">{{Post_categoriesmass.name}}</a></h4>
+                <h4>{{Post_categoriesmass.name}}</h4>
                 <p>{{Post_categoriesmass.description_for_main}}</p>
               </div>
             </div>
           </div>
+          
+          </a>
 {%endfor %}
         </div>
       </div>
