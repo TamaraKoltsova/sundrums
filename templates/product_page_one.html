@@ -17,7 +17,7 @@
 
 {{tipe_product_one.name}}
 {%for product_post in tipe_product_one.postproduct.all%}
- {{product_post.text}}
+ {{product_post.text|safe}}
   {{product_post.name}}
    {{product_post.video_link}}
 {%endfor%}
