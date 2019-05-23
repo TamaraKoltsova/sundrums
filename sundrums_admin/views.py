@@ -95,7 +95,7 @@ def tipe_product_page(request, product_id ):
     sliders = slider.objects.filter(is_active=True)
     reviewss = reviews.objects.filter(is_active=True)
     socbuttons = socbutton.objects.filter(is_active=True)
-    tipe_product_one=product_video.objects.get(id =product_id)
+    tipe_product_one=tipe_product.objects.get(id =product_id)
     return render(request, 'product_page_one.html', locals())    
   
 '''  
