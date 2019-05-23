@@ -16,7 +16,7 @@
 
 
 
-{%for product_post in tipe_product_one%}
+
  {{product_post.text|safe}}
   {% if product_post.name %}
   {{product_post.name}}
@@ -24,7 +24,7 @@
    {% if product_post.video_link%}
     {{product_post.video_link}}
    {%endif%}
-{%endfor%}
+
 </div>
 </div>
 </div>
