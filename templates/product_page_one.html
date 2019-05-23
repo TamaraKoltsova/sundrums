@@ -16,7 +16,7 @@
 
 
 
-{%for product_post in tipe_product_one.postproduct.all%}
+{%for product_post in tipe_product_one%}
  {{product_post.text|safe}}
   {% if product_post.name %}
   {{product_post.name}}
