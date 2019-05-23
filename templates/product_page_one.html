@@ -15,7 +15,7 @@
   
 
 
-{{tipe_product_one.name}}
+
 {%for product_post in tipe_product_one.postproduct.all%}
  {{product_post.text|safe}}
   {% if product_post.name %}
@@ -30,7 +30,8 @@
 </div>
 </section>
 </div>
-
+<br />
+<br /><br /><br /><br /><br /><br />
 {%include "write_us_wiget.html"%} 
   </main>
 {%include "footer.html"%}
