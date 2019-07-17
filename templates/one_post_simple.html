@@ -3,13 +3,14 @@
 {% block content %}
 {%include "header.html"%}
   <main id="main">
-  <meta content="{{Post_one.descrioptions_for_seo}}"  name="description">
+  <!--<meta content="{{Post_one.descrioptions_for_seo}}"  name="description">-->
     <!--==========================
       Portfolio Section
     ============================-->
 <section style="" id="call-to-action2" class="wow fadeIn">
 <div  class="container">
 <div class="row">
+<p> <h1>{{Post_categories_one.post.descrioptions_for_seo}}</h1></p> 
 <div class="col-sm-3 col-sm-12">{{Post_one.description|safe}}</div>
 </div>
 </div>
