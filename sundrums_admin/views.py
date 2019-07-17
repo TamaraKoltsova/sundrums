@@ -6,6 +6,7 @@ from  .models import *
 def index(request):
     boss_say = helful_information.objects.get(english_name = 'boss_say')
     description_meta = helful_information.objects.get(english_name = 'description')
+    keywords_meta = helful_information.objects.get(english_name = 'keywords')
     title_meta = helful_information.objects.get(english_name = 'title')
     contact_us = helful_information.objects.get(english_name = 'contact_us')
     logo = helful_information.objects.get(english_name = 'logo')
@@ -26,6 +27,7 @@ def index(request):
 def one_categories(request, post_id):
     adres = helful_information.objects.get(english_name = 'adres')
     telefon = helful_information.objects.get(english_name = 'telefon')
+    keywords_meta = helful_information.objects.get(english_name = 'keywords')
     email = helful_information.objects.get(english_name = 'email')
     description_meta = helful_information.objects.get(english_name = 'description')
     title_meta = helful_information.objects.get(english_name = 'title')
@@ -43,6 +45,7 @@ def one_categories(request, post_id):
 def one_post_simple(request, post_id):
     adres = helful_information.objects.get(english_name = 'adres')
     telefon = helful_information.objects.get(english_name = 'telefon')
+    keywords_meta = helful_information.objects.get(english_name = 'keywords')
     email = helful_information.objects.get(english_name = 'email')
     description_meta = helful_information.objects.get(english_name = 'description')
     title_meta = helful_information.objects.get(english_name = 'title')
@@ -60,6 +63,7 @@ def one_post_simple(request, post_id):
 def tipe_posts(request, post_id):
     adres = helful_information.objects.get(english_name = 'adres')
     telefon = helful_information.objects.get(english_name = 'telefon')
+    keywords_meta = helful_information.objects.get(english_name = 'keywords')
     email = helful_information.objects.get(english_name = 'email')
     description_meta = helful_information.objects.get(english_name = 'description')
     title_meta = helful_information.objects.get(english_name = 'title')
@@ -81,6 +85,7 @@ def tipe_kurs_page(request, kurs_id ):
     adres = helful_information.objects.get(english_name = 'adres')
     telefon = helful_information.objects.get(english_name = 'telefon')
     description_meta = helful_information.objects.get(english_name = 'description')
+    keywords_meta = helful_information.objects.get(english_name = 'keywords')
     title_meta = helful_information.objects.get(english_name = 'title')
     email = helful_information.objects.get(english_name = 'email')
     teachers = teacher.objects.filter(is_active=True)
@@ -99,6 +104,7 @@ def tipe_product_page(request, product_id ):
     boss_say = helful_information.objects.get(english_name = 'boss_say')
     adres = helful_information.objects.get(english_name = 'adres')
     description_meta = helful_information.objects.get(english_name = 'description')
+    keywords_meta = helful_information.objects.get(english_name = 'keywords')
     title_meta = helful_information.objects.get(english_name = 'title')
     telefon = helful_information.objects.get(english_name = 'telefon')
     email = helful_information.objects.get(english_name = 'email')
@@ -128,6 +134,7 @@ def masseger(request):
 def contact_page(request):
     topics = topic.objects.filter(is_active=True)
     description_meta = helful_information.objects.get(english_name = 'description')
+    keywords_meta = helful_information.objects.get(english_name = 'keywords')
     title_meta = helful_information.objects.get(english_name = 'title')
     return render(request, 'contact_page.html', locals())
 
