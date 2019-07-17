@@ -1,7 +1,103 @@
 User-agent: *
+Allow: /
+Disallow: /deployment
+Disallow: /genfiles
+Disallow: /mailer 
+Disallow: /slider_images
+Disallow: /static 
+Allow: /templates
+
+Host: https://sundrums.ru
+Sitemap: https://sundrums.ru/sitemap.xml
+
+User-agent: Yandex
+Disallow: /deployment
+Disallow: /genfiles
+Disallow: /mailer 
+Disallow: /slider_images
+Disallow: /static 
+Allow: /templates
+
+Host: https://sundrums.ru
+Sitemap: https://sundrums.ru/sitemap.xml
+
+User-agent: Googlebot
+
+Disallow: /deployment
+Disallow: /genfiles
+Disallow: /mailer 
+Disallow: /slider_images
+Disallow: /static 
+Allow: /templates
+
+Host: https://sundrums.ru
+Sitemap: https://sundrums.ru/sitemap.xml
+
+User-agent: AdsBot-Google
+Disallow:
+
+User-agent: Googlebot-Image
+Disallow:
+
+User-agent: AhrefsBot
 Disallow: /
-Host:151.248.126.240
-Sitemap:http://151.248.126.240/sitemap.xml
 
+User-agent: MJ12bot
+Disallow: /
 
+User-agent: SemrushBot
+Disallow: /
 
+User-agent: LinkpadBot
+Disallow: /
+
+User-agent: psbot
+Disallow: /
+
+User-agent: dotbot
+Disallow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: Nutch
+Disallow: /
+
+User-agent: WebCopier
+Disallow: /
+
+User-agent: WebStripper
+Disallow: /
+
+User-agent: Teleport
+Disallow: /
+
+User-agent: Offline Explorer
+Disallow: /
+
+User-agent: SiteSnagger
+Disallow: /
+
+User-agent: TeleportPro
+Disallow: /
+
+User-agent: EmailSiphon
+Disallow: /
+
+User-agent: EmailCollector
+Disallow: /
+
+User-agent: larbin
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: MSIECrawler
+Disallow: /
+
+User-agent: moget
+Disallow: /
+
+User-agent: sogou spider
+Disallow: /
