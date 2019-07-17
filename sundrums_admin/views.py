@@ -27,6 +27,8 @@ def one_categories(request, post_id):
     adres = helful_information.objects.get(english_name = 'adres')
     telefon = helful_information.objects.get(english_name = 'telefon')
     email = helful_information.objects.get(english_name = 'email')
+    description_meta = helful_information.objects.get(english_name = 'description')
+    title_meta = helful_information.objects.get(english_name = 'title')
     teachers = teacher.objects.filter(is_active=True)
     topics = topic.objects.filter(is_active=True)
     sliders = slider.objects.filter(is_active=True)
@@ -42,6 +44,8 @@ def one_post_simple(request, post_id):
     adres = helful_information.objects.get(english_name = 'adres')
     telefon = helful_information.objects.get(english_name = 'telefon')
     email = helful_information.objects.get(english_name = 'email')
+    description_meta = helful_information.objects.get(english_name = 'description')
+    title_meta = helful_information.objects.get(english_name = 'title')
     teachers = teacher.objects.filter(is_active=True)
     topics = topic.objects.filter(is_active=True)
     Post_categoriess = Post_categories.objects.filter(is_active=True)
@@ -57,6 +61,8 @@ def tipe_posts(request, post_id):
     adres = helful_information.objects.get(english_name = 'adres')
     telefon = helful_information.objects.get(english_name = 'telefon')
     email = helful_information.objects.get(english_name = 'email')
+    description_meta = helful_information.objects.get(english_name = 'description')
+    title_meta = helful_information.objects.get(english_name = 'title')
     topics = topic.objects.filter(is_active=True)
     teachers = teacher.objects.filter(is_active=True)
     sliders = slider.objects.filter(is_active=True)
@@ -74,6 +80,8 @@ def tipe_kurs_page(request, kurs_id ):
     boss_say = helful_information.objects.get(english_name = 'boss_say')
     adres = helful_information.objects.get(english_name = 'adres')
     telefon = helful_information.objects.get(english_name = 'telefon')
+    description_meta = helful_information.objects.get(english_name = 'description')
+    title_meta = helful_information.objects.get(english_name = 'title')
     email = helful_information.objects.get(english_name = 'email')
     teachers = teacher.objects.filter(is_active=True)
     topics = topic.objects.filter(is_active=True)
@@ -90,6 +98,8 @@ def tipe_kurs_page(request, kurs_id ):
 def tipe_product_page(request, product_id ):
     boss_say = helful_information.objects.get(english_name = 'boss_say')
     adres = helful_information.objects.get(english_name = 'adres')
+    description_meta = helful_information.objects.get(english_name = 'description')
+    title_meta = helful_information.objects.get(english_name = 'title')
     telefon = helful_information.objects.get(english_name = 'telefon')
     email = helful_information.objects.get(english_name = 'email')
     teachers = teacher.objects.filter(is_active=True)
@@ -117,6 +127,8 @@ def masseger(request):
 # для перевода на страницу с формой отправки
 def contact_page(request):
     topics = topic.objects.filter(is_active=True)
+    description_meta = helful_information.objects.get(english_name = 'description')
+    title_meta = helful_information.objects.get(english_name = 'title')
     return render(request, 'contact_page.html', locals())
 
 
