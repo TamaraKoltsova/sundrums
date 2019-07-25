@@ -41,7 +41,9 @@ class Post_categories(models.Model):
 
 class Posts(models.Model):
       name = models.CharField(      max_length = 255, blank=True,   null=True, default= ' ', verbose_name= 'имя статьи кратко это будет в меню навигации' )
-      descrioptions_for_seo = models.CharField(      max_length = 64, blank=True,   null=True, default= ' ', verbose_name= 'h1 для сео' )
+      descrioptions_for_seo = models.CharField(      max_length = 264, blank=True,   null=True, default= ' ', verbose_name= 'h1 для сео' )
+      descrioptions_for_title = models.CharField(      max_length = 264, blank=True,   null=True, default= ' ', verbose_name= 'title для сео' )
+      descrioptions_for_descriptions = models.CharField(      max_length = 264, blank=True,   null=True, default= ' ', verbose_name= 'descriptions для сео' )
       description_for_main = models.CharField(      max_length = 255, blank=True,   null=True, default= ' ', verbose_name= 'описание для разделов на главной в плитках' )
       image = models.ImageField(      blank=True,    upload_to='static/media/post_images/', help_text = 'загрузите сюда изображение для категории это будет в плитках навигации',   verbose_name= ' главное изображение для отдельных статей' )
       description = HTMLField(      blank=True,   null=True, default= ' ', verbose_name= ' все описание статьи можно вставлять код html целиком' )
