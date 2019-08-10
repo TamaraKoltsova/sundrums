@@ -1,3 +1,4 @@
 settings.py
 sundrums_nginx.conf
+db.sqlite3
 *.pyc

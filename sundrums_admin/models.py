@@ -1,6 +1,6 @@
 from tinymce.models import HTMLField
 from django.db import models
-#from uuslug import slugify# Это библиотека для преобразования заголовков в ссылки django-uuslug
+from uuslug import slugify  # Это библиотека для преобразования заголовков в ссылки django-uuslug
 
 class masseger(models.Model):
       name = models.CharField(max_length = 64, blank=True,   null=True, default= ' ', verbose_name= ' ФИО' )
@@ -40,7 +40,17 @@ class Post_categories(models.Model):
       class Meta:
         verbose_name = 'Категория'
         verbose_name_plural = 'Категории'
+      
+      def __str__(self):
+        return self.name
 
+      def __unicode__(self):
+        return self.name
+  
+      def save_Post_categories(self):
+        mass_for_slug = '{0}-{1}'.format(self.pk, slugify(self.name))  
+        self.slug = mass_for_slug[2:]
+        super(Posts, self).save()
 class Posts(models.Model):
       name = models.CharField(      max_length = 255, blank=True,   null=True, default= ' ', verbose_name= 'имя статьи кратко это будет в меню навигации' )
       descrioptions_for_seo = models.CharField(      max_length = 264, blank=True,   null=True, default= ' ', verbose_name= 'h1 для сео' )
