@@ -47,7 +47,7 @@ class Post_categories(models.Model):
       def __unicode__(self):
         return self.name
   
-      def save_Post_categories(self):
+      def save(self):
         mass_for_slug = '{0}-{1}'.format(self.pk, slugify(self.name))  
         self.slug = mass_for_slug[2:]
         super(Posts, self).save()
