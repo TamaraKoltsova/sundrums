@@ -1,5 +1,6 @@
 from tinymce.models import HTMLField
 from django.db import models
+#from uuslug import slugify# Это библиотека для преобразования заголовков в ссылки django-uuslug
 
 class masseger(models.Model):
       name = models.CharField(max_length = 64, blank=True,   null=True, default= ' ', verbose_name= ' ФИО' )
@@ -32,6 +33,7 @@ class Post_categories(models.Model):
       name = models.CharField(      max_length = 64, blank=True,   null=True, default= ' ', verbose_name= 'имя категории в навигации ' )
       description = HTMLField(        blank=False,   null=True, default= ' ', verbose_name= 'описание категории сюда можно поместить целую статью в html ' )
       image = models.ImageField(      blank=True,    upload_to='static/media/categories_images/', help_text = 'загрузите сюда изображение для категории это будет в плитках навигации',   verbose_name= ' главное изображение для категории' )
+      slug = models.CharField(verbose_name='Транслит', max_length=200, blank=True)  # Поле для записи ссылки
       is_active = models.BooleanField(              default='True', verbose_name= 'Включить категорию на сайт? ' )
       def __str__(self):
        return "Категория: %s" % (self.name)
@@ -45,6 +47,7 @@ class Posts(models.Model):
       descrioptions_for_title = models.CharField(      max_length = 264, blank=True,   null=True, default= ' ', verbose_name= 'title для сео' )
       descrioptions_for_descriptions = models.CharField(      max_length = 264, blank=True,   null=True, default= ' ', verbose_name= 'descriptions для сео' )
       description_for_main = models.CharField(      max_length = 255, blank=True,   null=True, default= ' ', verbose_name= 'описание для разделов на главной в плитках' )
+      slug = models.CharField(verbose_name='Транслит', max_length=200, blank=True)  # Поле для записи ссылки
       image = models.ImageField(      blank=True,    upload_to='static/media/post_images/', help_text = 'загрузите сюда изображение для категории это будет в плитках навигации',   verbose_name= ' главное изображение для отдельных статей' )
       description = HTMLField(      blank=True,   null=True, default= ' ', verbose_name= ' все описание статьи можно вставлять код html целиком' )
       categories = models.ForeignKey(Post_categories, on_delete=models.SET_NULL, related_name = 'post' ,  blank=True,   null=True, default= ' ', verbose_name= ' ' )
@@ -72,6 +75,7 @@ class tipe_kurs(models.Model):
       name = models.CharField(      max_length = 64, blank=True,   null=True, default= ' ', verbose_name= 'имя курса ' )
       info_kurs = HTMLField(        blank=True,   null=True, default= ' ', verbose_name= ' описание' )
       image = models.ImageField(      blank=True,    upload_to='static/media/kurs_images/', help_text = 'фото преподователя',   verbose_name=  'фото преподавателя' )
+      slug = models.CharField(verbose_name='Транслит', max_length=200, blank=True)  # Поле для записи ссылки
       teacher_kurs = models.ForeignKey(teacher, on_delete=models.SET_NULL, related_name = 'kurs',   null=True,         verbose_name= ' преподаватель' )
       password = models.CharField(      max_length = 64, blank=True,   null=True, default= '0', verbose_name= 'пароль для открытия статии (если оставить 0 то пароль запрашиваться не будет)) ' )
       
@@ -141,6 +145,7 @@ class socbutton(models.Model):
 class kurs_video(models.Model):
       name = models.CharField(max_length = 64, blank=True,   null=True, default='', verbose_name= 'имя видео' )
       video_link = models.CharField(max_length = 4064, blank=True,   null=True, default='', verbose_name= 'ссылка на видео из ютуба' )
+      slug = models.CharField(verbose_name='Транслит', max_length=200, blank=True)  # Поле для записи ссылки
       tipe_kurs = models.ForeignKey(tipe_kurs, on_delete=models.SET_NULL, related_name = 'postkurs',     null=True, default='', verbose_name= 'в какой курс добавлять' )
       text = HTMLField(                verbose_name= ' текст статьи поста ' )
       def __str__(self):
@@ -153,6 +158,7 @@ class kurs_video(models.Model):
 class categories_product(models.Model):
       name = models.CharField(      max_length = 64, blank=True,   null=True, default= ' ', verbose_name= 'имя категории ' )
       name_ing = models.CharField(      max_length = 64, blank=True,   null=True, default= ' ', verbose_name= 'имя категории на английском для фильтра ' )
+      slug = models.CharField(verbose_name='Транслит', max_length=200, blank=True)  # Поле для записи ссылки
       is_active = models.BooleanField(              default='True', verbose_name= 'вкл?' )
       def __str__(self):
        return "категории товаров: %s" % (self.name)
@@ -163,6 +169,7 @@ class categories_product(models.Model):
 class tipe_product(models.Model):
       name = models.CharField(      max_length = 64, blank=True,   null=True, default= ' ', verbose_name= 'имя товара ' )
       info_product = HTMLField(        blank=True,   null=True, default= ' ', verbose_name= ' описание' )
+      slug = models.CharField(verbose_name='Транслит', max_length=200, blank=True)  # Поле для записи ссылки
       image = models.ImageField(      blank=True,    upload_to='static/media/kproduct_images/', help_text = 'фото преподователя',   verbose_name=  'фото товара' )
       categories_product = models.ForeignKey(categories_product, on_delete=models.SET_NULL, related_name = 'product',   null=True,         verbose_name= 'категория товара' )
       #password = models.CharField(      max_length = 64, blank=True,   null=True, default= '0', verbose_name= 'пароль для открытия статии (если оставить 0 то пароль запрашиваться не будет)) ' )
@@ -178,6 +185,7 @@ class product_video(models.Model):
       name = models.CharField(max_length = 64, blank=True,   null=True, default='', verbose_name= 'имя видео' )
       video_link = models.CharField(max_length = 64, blank=True,   null=True, default='', verbose_name= 'ссылка на видео из ютуба' )
       tipe_product = models.ForeignKey(tipe_product, on_delete=models.SET_NULL, related_name = 'postproduct',     null=True, default='', verbose_name= 'к какому продукту добавлять' )
+      slug = models.CharField(verbose_name='Транслит', max_length=200, blank=True)  # Поле для записи ссылки
       text = HTMLField(                verbose_name= ' текст статьи поста ' )
       def __str__(self):
        return "статья с видео для товаров: %s" % (self.name)
