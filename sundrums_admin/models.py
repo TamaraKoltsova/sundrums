@@ -50,7 +50,7 @@ class Post_categories(models.Model):
       def save(self):
         mass_for_slug = '{0}-{1}'.format(self.pk, slugify(self.name))  
         self.slug = mass_for_slug[2:]
-        super(Posts, self).save()
+        super(Post_categories, self).save()
 class Posts(models.Model):
       name = models.CharField(      max_length = 255, blank=True,   null=True, default= ' ', verbose_name= 'имя статьи кратко это будет в меню навигации' )
       descrioptions_for_seo = models.CharField(      max_length = 264, blank=True,   null=True, default= ' ', verbose_name= 'h1 для сео' )
