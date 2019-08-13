@@ -17,11 +17,11 @@ urlpatterns = [
    #тестирую ссылки первого уровня
    
    #тестирую ссылки первого уровня
-   url(r'^magazin/(?P<post_id>.+)/$', views.one_post_simple, name='magazin'),
-   url(r'^entsiklopediia/(?P<post_id>.+)/$', views.one_post_simple, name='entsiklopediia'),
-   url(r'^novosti/(?P<post_id>.+)/$', views.one_post_simple, name='novosti'),
-   url(r'^sobytiia/(?P<post_id>.+)/$', views.one_post_simple, name='sobytiia'),
-   url(r'^korporativnye-treningi/(?P<post_id>.+)/$', views.one_post_simple, name='korporativnye-treningi'),
+   url(r'^magazin/(?P<slug>.+)/$', views.one_post_simple, name='magazin'),
+   url(r'^entsiklopediia/(?P<slug>.+)/$', views.one_post_simple, name='entsiklopediia'),
+   url(r'^novosti/(?P<slug>.+)/$', views.one_post_simple, name='novosti'),
+   url(r'^sobytiia/(?P<slug>.+)/$', views.one_post_simple, name='sobytiia'),
+   url(r'^korporativnye-treningi/(?P<slug>.+)/$', views.one_post_simple, name='korporativnye-treningi'),
    url(r'^shkola/(?P<slug>.+)/$', views.one_post_simple, name='shkola'),
    #тестирую ссылки первого уровня
    
