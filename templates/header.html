@@ -31,7 +31,7 @@
             <li class="menu-has-children"><a style="color: #FCD362;"   style="font-size: 8pt;" href="{% url Post_categoriesmass.slug Post_categoriesmass.id %}">{{Post_categoriesmass.name}}</a>
              <ul>
               {% for post in Post_categoriesmass.post.all%}
-              <li><a  href="{% url  'one_post_simple' post.id %}">{{post.name}}</a></li>
+              <li><a  href="{% url  Post_categoriesmass.slug  post.id %}">{{post.name}}</a></li>
               {%endfor%}
             </ul>
            {%endfor %} 
