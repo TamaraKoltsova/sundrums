@@ -204,12 +204,6 @@ def tipe_posts_magazin(request):
     tipe_kurss = tipe_kurs.objects.filter(is_active=True)
     return render(request, 'tipe_posts.html', locals())#
 
-magazin
-entsiklopediia
-novosti
-sobytiia
-korporativnye-treningi
-shkola
 
 def tipe_posts_entsiklopediia(request):
     adres = helful_information.objects.get(english_name = 'adres')
