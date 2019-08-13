@@ -81,7 +81,7 @@ class Posts(models.Model):
       def save(self):
         #self.slug = '{0}-{1}'.format(self.pk, slugify(self.descrioptions_for_title))  # Статья будет отображаться в виде NN-АА-АААА
         mass_for_slug = '{0}-{1}'.format(self.pk, slugify(self.name))  # Статья будет отображаться в виде NN-АА-АААА
-        self.slug = mass_for_slug[2:]
+        self.slug = mass_for_slug[3:]
         super(Posts, self).save()
 class teacher(models.Model):
       name = models.CharField(      max_length = 64, blank=True,   null=True, default= ' ', verbose_name= 'ФИО ' )
