@@ -204,4 +204,85 @@ def tipe_posts_magazin(request):
     tipe_kurss = tipe_kurs.objects.filter(is_active=True)
     return render(request, 'tipe_posts.html', locals())#
 
+magazin
+entsiklopediia
+novosti
+sobytiia
+korporativnye-treningi
+shkola
 
+def tipe_posts_entsiklopediia(request):
+    adres = helful_information.objects.get(english_name = 'adres')
+    telefon = helful_information.objects.get(english_name = 'telefon')
+    keywords_meta = helful_information.objects.get(english_name = 'keywords')
+    email = helful_information.objects.get(english_name = 'email')
+    description_meta = helful_information.objects.get(english_name = 'description')
+    title_meta = helful_information.objects.get(english_name = 'title')
+    topics = topic.objects.filter(is_active=True)
+    teachers = teacher.objects.filter(is_active=True)
+    sliders = slider.objects.filter(is_active=True)
+    Post_categoriess = Post_categories.objects.filter(is_active=True)
+    #Post_categories_tipe = Post_categories.objects.get(id = post_id)
+    Post_categories_tipe = Posts.objects.filter(categories_id = 9)
+    reviewss = reviews.objects.filter(is_active=True)
+    socbuttons = socbutton.objects.filter(is_active=True)
+    tipe_kurss = tipe_kurs.objects.filter(is_active=True)
+    return render(request, 'tipe_posts.html', locals())#
+
+
+def tipe_posts_novosti(request):
+    adres = helful_information.objects.get(english_name = 'adres')
+    telefon = helful_information.objects.get(english_name = 'telefon')
+    keywords_meta = helful_information.objects.get(english_name = 'keywords')
+    email = helful_information.objects.get(english_name = 'email')
+    description_meta = helful_information.objects.get(english_name = 'description')
+    title_meta = helful_information.objects.get(english_name = 'title')
+    topics = topic.objects.filter(is_active=True)
+    teachers = teacher.objects.filter(is_active=True)
+    sliders = slider.objects.filter(is_active=True)
+    Post_categoriess = Post_categories.objects.filter(is_active=True)
+    #Post_categories_tipe = Post_categories.objects.get(id = post_id)
+    Post_categories_tipe = Posts.objects.filter(categories_id = 6)
+    reviewss = reviews.objects.filter(is_active=True)
+    socbuttons = socbutton.objects.filter(is_active=True)
+    tipe_kurss = tipe_kurs.objects.filter(is_active=True)
+    return render(request, 'tipe_posts.html', locals())#
+    
+    
+def tipe_posts_sobytiia(request):
+    adres = helful_information.objects.get(english_name = 'adres')
+    telefon = helful_information.objects.get(english_name = 'telefon')
+    keywords_meta = helful_information.objects.get(english_name = 'keywords')
+    email = helful_information.objects.get(english_name = 'email')
+    description_meta = helful_information.objects.get(english_name = 'description')
+    title_meta = helful_information.objects.get(english_name = 'title')
+    topics = topic.objects.filter(is_active=True)
+    teachers = teacher.objects.filter(is_active=True)
+    sliders = slider.objects.filter(is_active=True)
+    Post_categoriess = Post_categories.objects.filter(is_active=True)
+    #Post_categories_tipe = Post_categories.objects.get(id = post_id)
+    Post_categories_tipe = Posts.objects.filter(categories_id = 5)
+    reviewss = reviews.objects.filter(is_active=True)
+    socbuttons = socbutton.objects.filter(is_active=True)
+    tipe_kurss = tipe_kurs.objects.filter(is_active=True)
+    return render(request, 'tipe_posts.html', locals())# 
+    
+       
+    
+def tipe_posts_korporativnye-treningi(request):
+    adres = helful_information.objects.get(english_name = 'adres')
+    telefon = helful_information.objects.get(english_name = 'telefon')
+    keywords_meta = helful_information.objects.get(english_name = 'keywords')
+    email = helful_information.objects.get(english_name = 'email')
+    description_meta = helful_information.objects.get(english_name = 'description')
+    title_meta = helful_information.objects.get(english_name = 'title')
+    topics = topic.objects.filter(is_active=True)
+    teachers = teacher.objects.filter(is_active=True)
+    sliders = slider.objects.filter(is_active=True)
+    Post_categoriess = Post_categories.objects.filter(is_active=True)
+    #Post_categories_tipe = Post_categories.objects.get(id = post_id)
+    Post_categories_tipe = Posts.objects.filter(categories_id = 4)
+    reviewss = reviews.objects.filter(is_active=True)
+    socbuttons = socbutton.objects.filter(is_active=True)
+    tipe_kurss = tipe_kurs.objects.filter(is_active=True)
+    return render(request, 'tipe_posts.html', locals())# 
