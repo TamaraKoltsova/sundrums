@@ -3,7 +3,7 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
-   #url(r'^one_post/(?P<post_id>\w+)/', views.one_categories, name='one_post'),
+   url(r'^one_post/(?P<post_id>\w+)/', views.one_categories, name='one_post'),
    url(r'^tipe_posts/(?P<post_id>\w+)/', views.tipe_posts, name='tipe_posts'),
    
    #тестирую ссылки первого уровня
