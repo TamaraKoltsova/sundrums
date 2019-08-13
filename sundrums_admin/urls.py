@@ -6,6 +6,16 @@ urlpatterns = [
    url(r'^one_post/(?P<post_id>\w+)/', views.one_categories, name='one_post'),
    url(r'^tipe_posts/(?P<post_id>\w+)/', views.tipe_posts, name='tipe_posts'),
    
+   
+    #тестирую ссылки первого уровня для переxода на главные ветки
+   #url(r'^magazin/)/$', views.tipe_posts_magazin, name='magazin'),
+   #url(r'^entsiklopediia/)/$', views.tipe_posts_entsiklopediia, name='entsiklopediia'),
+   #url(r'^novosti/)/$', views.tipe_posts_novosti, name='novosti'),
+   #url(r'^sobytiia/)/$', views.tipe_posts_sobytiia, name='sobytiia'),
+   #url(r'^korporativnye-treningi/$', views.tipe_posts_korporativnye-treningi, name='korporativnye-treningi'),
+   url(r'^shkola/$', views.tipe_posts_shkola, name='shkola'),
+   #тестирую ссылки первого уровня
+   
    #тестирую ссылки первого уровня
    url(r'^magazin/(?P<post_id>.+)/$', views.one_post_simple, name='magazin'),
    url(r'^entsiklopediia/(?P<post_id>.+)/$', views.one_post_simple, name='entsiklopediia'),
@@ -15,14 +25,7 @@ urlpatterns = [
    url(r'^shkola/(?P<slug>.+)/$', views.one_post_simple, name='shkola'),
    #тестирую ссылки первого уровня
    
-   #тестирую ссылки первого уровня для переxода на главные ветки
-   #url(r'^magazin/)/$', views.tipe_posts_magazin, name='magazin'),
-   #url(r'^entsiklopediia/)/$', views.tipe_posts_entsiklopediia, name='entsiklopediia'),
-   #url(r'^novosti/)/$', views.tipe_posts_novosti, name='novosti'),
-   #url(r'^sobytiia/)/$', views.tipe_posts_sobytiia, name='sobytiia'),
-   #url(r'^korporativnye-treningi/$', views.tipe_posts_korporativnye-treningi, name='korporativnye-treningi'),
-   url(r'^shkola/$', views.tipe_posts_shkola, name='shkola'),
-   #тестирую ссылки первого уровня
+  
    
    
    #url(r'^one_post_simple/(?P<slug>.+)/$', views.one_post_simple, name='one_post_simple'),
