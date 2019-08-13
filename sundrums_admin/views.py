@@ -186,5 +186,22 @@ def tipe_posts_shkola(request):
     return render(request, 'tipe_posts.html', locals())#
 
 
+def tipe_posts_magazin(request):
+    adres = helful_information.objects.get(english_name = 'adres')
+    telefon = helful_information.objects.get(english_name = 'telefon')
+    keywords_meta = helful_information.objects.get(english_name = 'keywords')
+    email = helful_information.objects.get(english_name = 'email')
+    description_meta = helful_information.objects.get(english_name = 'description')
+    title_meta = helful_information.objects.get(english_name = 'title')
+    topics = topic.objects.filter(is_active=True)
+    teachers = teacher.objects.filter(is_active=True)
+    sliders = slider.objects.filter(is_active=True)
+    Post_categoriess = Post_categories.objects.filter(is_active=True)
+    #Post_categories_tipe = Post_categories.objects.get(id = post_id)
+    Post_categories_tipe = Posts.objects.filter(categories_id = 8)
+    reviewss = reviews.objects.filter(is_active=True)
+    socbuttons = socbutton.objects.filter(is_active=True)
+    tipe_kurss = tipe_kurs.objects.filter(is_active=True)
+    return render(request, 'tipe_posts.html', locals())#
 
 

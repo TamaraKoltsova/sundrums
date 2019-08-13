@@ -8,7 +8,7 @@ urlpatterns = [
    
    
     #тестирую ссылки первого уровня для переxода на главные ветки
-   #url(r'^magazin/)/$', views.tipe_posts_magazin, name='magazin'),
+   url(r'^magazin/)/$', views.tipe_posts_magazin, name='magazin'),
    #url(r'^entsiklopediia/)/$', views.tipe_posts_entsiklopediia, name='entsiklopediia'),
    #url(r'^novosti/)/$', views.tipe_posts_novosti, name='novosti'),
    #url(r'^sobytiia/)/$', views.tipe_posts_sobytiia, name='sobytiia'),
