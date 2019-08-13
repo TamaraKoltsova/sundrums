@@ -42,7 +42,7 @@ def one_categories(request, post_id):
     return render(request, 'one_post.html', locals())#
     #
     
-def one_post_simple(request, post_id):
+def one_post_simple(request, slug):
     adres = helful_information.objects.get(english_name = 'adres')
     telefon = helful_information.objects.get(english_name = 'telefon')
     keywords_meta = helful_information.objects.get(english_name = 'keywords')
@@ -53,8 +53,8 @@ def one_post_simple(request, post_id):
     topics = topic.objects.filter(is_active=True)
     Post_categoriess = Post_categories.objects.filter(is_active=True)
     reviewss = reviews.objects.filter(is_active=True)
-    Post_one = Posts.objects.get(id = post_id)
-    #Post_one = get_object_or_404(Posts, slug=slug)
+    #Post_one = Posts.objects.get(id = post_id)
+    Post_one = get_object_or_404(Posts, slug=slug)
     socbuttons = socbutton.objects.filter(is_active=True)
     tipe_kurss = tipe_kurs.objects.filter(is_active=True)
     return render(request, 'one_post_simple.html', locals())#

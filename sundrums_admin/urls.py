@@ -12,8 +12,9 @@ urlpatterns = [
    url(r'^novosti/(?P<post_id>.+)/$', views.one_post_simple, name='novosti'),
    url(r'^sobytiia/(?P<post_id>.+)/$', views.one_post_simple, name='sobytiia'),
    url(r'^korporativnye-treningi/(?P<post_id>.+)/$', views.one_post_simple, name='korporativnye-treningi'),
-   url(r'^shkola/(?P<post_id>.+)/$', views.one_post_simple, name='shkola'),
+   url(r'^shkola/(?P<slug>.+)/$', views.one_post_simple, name='shkola'),
    #тестирую ссылки первого уровня
+   
    #тестирую ссылки первого уровня для переxода на главные ветки
    #url(r'^magazin/)/$', views.tipe_posts_magazin, name='magazin'),
    #url(r'^entsiklopediia/)/$', views.tipe_posts_entsiklopediia, name='entsiklopediia'),
@@ -24,7 +25,7 @@ urlpatterns = [
    #тестирую ссылки первого уровня
    
    
-   
+   #url(r'^one_post_simple/(?P<slug>.+)/$', views.one_post_simple, name='one_post_simple'),
    #url(r'^one_post_simple/(?P<post_id>\w+)/', views.one_post_simple, name='one_post_simple'),
    url(r'^tipe_kurs_page/(?P<kurs_id>\w+)/', views.tipe_kurs_page, name='tipe_kurs_page'),
    url(r'^product_page/(?P<product_id>\w+)/', views.tipe_product_page, name='product_page'),
