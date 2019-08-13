@@ -15,7 +15,7 @@
         </header>
         <div class="row portfolio-container">
 {% for Post_categoriesmass in  Post_categories_tipe %}
-            <a href="{% url  Post_categoriesmass.slug Post_categoriesmass.id %}" class="link-details" title="More Details">
+            <a href="{% url  'one_post_simple' Post_categoriesmass.id %}" class="link-details" title="More Details">
               
           <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
             <div class="portfolio-wrap">

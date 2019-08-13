@@ -67,7 +67,22 @@ class Posts(models.Model):
       class Meta:
         verbose_name = 'Статья'
         verbose_name_plural = 'Статьи'
-   
+      def __str__(self):
+       return "Статья: %s" % (self.name)
+      class Meta:
+        verbose_name = 'Статья'
+        verbose_name_plural = 'Статьи'
+      def __str__(self):
+        return self.name
+
+      def __unicode__(self):
+        return self.name
+  
+      def save(self):
+        #self.slug = '{0}-{1}'.format(self.pk, slugify(self.descrioptions_for_title))  # Статья будет отображаться в виде NN-АА-АААА
+        mass_for_slug = '{0}-{1}'.format(self.pk, slugify(self.name))  # Статья будет отображаться в виде NN-АА-АААА
+        self.slug = mass_for_slug[2:]
+        super(Posts, self).save()
 class teacher(models.Model):
       name = models.CharField(      max_length = 64, blank=True,   null=True, default= ' ', verbose_name= 'ФИО ' )
       image = models.ImageField(      blank=True,    upload_to='static/media/post_images/', help_text = 'фото преподователя',   verbose_name=  'фото преподавателя' )
