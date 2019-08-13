@@ -269,7 +269,7 @@ def tipe_posts_sobytiia(request):
     
        
     
-def tipe_posts_korporativnye-treningi(request):
+def tipe_posts_korporativnye_treningi(request):
     adres = helful_information.objects.get(english_name = 'adres')
     telefon = helful_information.objects.get(english_name = 'telefon')
     keywords_meta = helful_information.objects.get(english_name = 'keywords')

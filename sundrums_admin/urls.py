@@ -12,7 +12,7 @@ urlpatterns = [
    url(r'^entsiklopediia/$', views.tipe_posts_entsiklopediia, name='entsiklopediia'),
    url(r'^novosti/$', views.tipe_posts_novosti, name='novosti'),
    url(r'^sobytiia/$', views.tipe_posts_sobytiia, name='sobytiia'),
-   url(r'^korporativnye-treningi/$', views.tipe_posts_korporativnye-treningi, name='korporativnye-treningi'),
+   url(r'^korporativnye-treningi/$', views.tipe_posts_korporativnye_treningi, name='korporativnye-treningi'),
    url(r'^shkola/$', views.tipe_posts_shkola, name='shkola'),
    #тестирую ссылки первого уровня
    
