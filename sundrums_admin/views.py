@@ -54,6 +54,7 @@ def one_post_simple(request, post_id):
     Post_categoriess = Post_categories.objects.filter(is_active=True)
     reviewss = reviews.objects.filter(is_active=True)
     Post_one = Posts.objects.get(id = post_id)
+    #Post_one = get_object_or_404(Posts, slug=slug)
     socbuttons = socbutton.objects.filter(is_active=True)
     tipe_kurss = tipe_kurs.objects.filter(is_active=True)
     return render(request, 'one_post_simple.html', locals())#
