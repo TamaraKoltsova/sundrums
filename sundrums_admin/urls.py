@@ -14,6 +14,15 @@ urlpatterns = [
    url(r'^korporativnye-treningi/(?P<post_id>.+)/$', views.one_post_simple, name='korporativnye-treningi'),
    url(r'^shkola/(?P<post_id>.+)/$', views.one_post_simple, name='shkola'),
    #тестирую ссылки первого уровня
+   #тестирую ссылки первого уровня для переxода на главные ветки
+   url(r'^magazin/)/$', views.tipe_posts_magazin, name='magazin'),
+   url(r'^entsiklopediia/)/$', views.tipe_posts_entsiklopediia, name='entsiklopediia'),
+   url(r'^novosti/)/$', views.tipe_posts_novosti, name='novosti'),
+   url(r'^sobytiia/)/$', views.tipe_posts_sobytiia, name='sobytiia'),
+   url(r'^korporativnye-treningi/$', views.tipe_posts_korporativnye-treningi, name='korporativnye-treningi'),
+   url(r'^shkola/$', views.tipe_posts_shkola, name='shkola'),
+   #тестирую ссылки первого уровня
+   
    
    
    #url(r'^one_post_simple/(?P<post_id>\w+)/', views.one_post_simple, name='one_post_simple'),
