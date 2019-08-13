@@ -5,8 +5,15 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
    #url(r'^one_post/(?P<post_id>\w+)/', views.one_categories, name='one_post'),
    url(r'^tipe_posts/(?P<post_id>\w+)/', views.tipe_posts, name='tipe_posts'),
+   
+   #тестирую ссылки первого уровня
    url(r'^magazin/(?P<post_id>.+)/$', views.one_post_simple, name='one_post_simple'),
-
+   url(r'^entsiklopediia/(?P<post_id>.+)/$', views.one_post_simple, name='one_post_simple'),
+   url(r'^novosti/(?P<post_id>.+)/$', views.one_post_simple, name='one_post_simple'),
+   url(r'^sobytiia/(?P<post_id>.+)/$', views.one_post_simple, name='one_post_simple'),
+   url(r'^korporativnye-treningi/(?P<post_id>.+)/$', views.one_post_simple, name='one_post_simple'),
+   url(r'^shkola/(?P<post_id>.+)/$', views.one_post_simple, name='one_post_simple'),
+   #тестирую ссылки первого уровня
    
    
    #url(r'^one_post_simple/(?P<post_id>\w+)/', views.one_post_simple, name='one_post_simple'),
