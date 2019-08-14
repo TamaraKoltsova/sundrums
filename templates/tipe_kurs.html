@@ -9,7 +9,7 @@
         </header>
         <div class="row portfolio-container">
 {% for kurs in tipe_kurss %}
-          <a style="margin-right: 20px;" href="{% url 'tipe_kurs_page' kurs.id %}" class="link-details" title="More Details">
+          <a style="margin-right: 20px;" href="{% url 'kursi' kurs.slug %}" class="link-details" title="More Details">
           <div  class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
             <div class="portfolio-wrap">
               <fgure style="height: 90%;">

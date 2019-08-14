@@ -30,7 +30,8 @@ urlpatterns = [
    
    #url(r'^one_post_simple/(?P<slug>.+)/$', views.one_post_simple, name='one_post_simple'),
    #url(r'^one_post_simple/(?P<post_id>\w+)/', views.one_post_simple, name='one_post_simple'),
-   url(r'^tipe_kurs_page/(?P<kurs_id>\w+)/', views.tipe_kurs_page, name='tipe_kurs_page'),
+   #url(r'^tipe_kurs_page/(?P<kurs_id>\w+)/', views.tipe_kurs_page, name='tipe_kurs_page'),
+   url(r'^kursi/(?P<slug>\w+)/', views.tipe_kurs_page, name='tipe_kurs_page'),
    url(r'^product_page/(?P<product_id>\w+)/', views.tipe_product_page, name='product_page'),
    url(r'^img/', views.img_load, name='img'),
    url(r'^massegers/', views.massegers, name='massegers'),

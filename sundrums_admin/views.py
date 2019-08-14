@@ -81,7 +81,7 @@ def tipe_posts(request, post_id):
     #
 
 
-def tipe_kurs_page(request, kurs_id ):
+def tipe_kurs_page(request, slug ):
     boss_say = helful_information.objects.get(english_name = 'boss_say')
     adres = helful_information.objects.get(english_name = 'adres')
     telefon = helful_information.objects.get(english_name = 'telefon')
@@ -95,7 +95,8 @@ def tipe_kurs_page(request, kurs_id ):
     sliders = slider.objects.filter(is_active=True)
     reviewss = reviews.objects.filter(is_active=True)
     socbuttons = socbutton.objects.filter(is_active=True)
-    tipe_kurs_one=tipe_kurs.objects.get(id =kurs_id)
+    tipe_kurs_one=get_object_or_404(Posts, slug=slug)
+    #tipe_kurs_one=tipe_kurs.objects.get(id =kurs_id)
     # получаем пароль и делаем защиту ввиде умножения на 3
     password_from_bd_for_kurs = int(tipe_kurs_one.password) * 3
     #print(password_from_bd_for_kurs)
