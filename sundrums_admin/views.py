@@ -95,7 +95,7 @@ def tipe_kurs_page(request, slug ):
     sliders = slider.objects.filter(is_active=True)
     reviewss = reviews.objects.filter(is_active=True)
     socbuttons = socbutton.objects.filter(is_active=True)
-    tipe_kurs_one=get_object_or_404(Posts, slug=slug)
+    tipe_kurs_one=get_object_or_404(tipe_kurs, slug=slug)
     #tipe_kurs_one=tipe_kurs.objects.get(id =kurs_id)
     # получаем пароль и делаем защиту ввиде умножения на 3
     password_from_bd_for_kurs = int(tipe_kurs_one.password) * 3
