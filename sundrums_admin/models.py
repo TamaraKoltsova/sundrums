@@ -123,7 +123,7 @@ class tipe_kurs(models.Model):
         #self.slug = '{0}-{1}'.format(self.pk, slugify(self.descrioptions_for_title))  # Статья будет отображаться в виде NN-АА-АААА
         mass_for_slug = '{0}-{1}'.format(self.pk, slugify(self.name))  # Статья будет отображаться в виде NN-АА-АААА
         self.slug = mass_for_slug[2:]
-        super(Posts, self).save()
+        super(tipe_kurs, self).save()
 class apprentice(models.Model):
       name = models.CharField(      max_length = 64, blank=True,   null=True, default= ' ', verbose_name= ' ФИО' )
       tel = models.CharField(      max_length = 64, blank=True,   null=True, default= ' ', verbose_name= ' номер телефона' )
