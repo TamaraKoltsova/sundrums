@@ -2,9 +2,7 @@
 {%load staticfiles%}
 {% block content %}
 {%include "header.html"%}
-  <main id="main">
-  
-  <!--Breadcrumbs-->
+<!--Breadcrumbs-->
    <section>
        <div class="contaier">
            <div class="row">
@@ -12,13 +10,16 @@
                <ol class="breadcrumb">
                <li><a href="/">Главная</a></li>
                <!--<li><a href="#">Library</a></li>-->
-               <!--<li class="active">Data</li>-->
+               <li class="active"  >{{Post_categories_tipe.name}}</li>
                </ol>
                </div>
            </div>
        </div>
    </section>
   <!--Breadcrumbs-->
+  <main id="main">
+  
+  
   
     <!--==========================
       Portfolio Section
