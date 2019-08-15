@@ -180,7 +180,7 @@ def tipe_posts_shkola(request):
     sliders = slider.objects.filter(is_active=True)
     Post_categoriess = Post_categories.objects.filter(is_active=True)
     #Post_categories_tipe = Post_categories.objects.get(id = post_id)
-    Post_categories_name = Post_categories.objects.filter(id = 3)
+    Post_categories_name = Post_categories.objects.get(id = 3)
     Post_categories_tipe = Posts.objects.filter(categories_id = 3)
     reviewss = reviews.objects.filter(is_active=True)
     socbuttons = socbutton.objects.filter(is_active=True)
