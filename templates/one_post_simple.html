@@ -3,6 +3,32 @@
 {% block content %}
 {%include "header.html"%}
   <main id="main">
+  <br /><br /><br /><br /><br /><br />
+  
+  <!--Breadcrumbs-->
+   <section>
+       <div class="contaier">
+           <div class="row">
+               <div class="col-md-12">
+               <ol class="breadcrumb">
+               <li><a href="/">Главная </a></li>
+               <li><a href="{{name_for_categories.slug}}">{{name_for_categories.name}}</a></li>
+               <li class="active"> / {{Post_one.name}}</li>
+               </ol>
+               </div>
+           </div>
+       </div>
+   </section>
+  <!--Breadcrumbs-->
+  
+  
+  
+  
+  
+  
+  
+  
+  
   <!--<meta content="{{Post_one.descrioptions_for_seo}}"  name="description">-->
     <!--==========================
       Portfolio Section
