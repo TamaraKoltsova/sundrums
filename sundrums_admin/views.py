@@ -57,7 +57,7 @@ def one_post_simple(request, slug):
     #id_for_categorie = Posts.objects.get(slug = slug)
     
     Post_one = get_object_or_404(Posts, slug=slug)
-    print(Post_one.categories)
+    print(  "номер такой"   ,Post_one.categories_id)
     name_for_categories= Post_categories.objects.get( id = int(Post_one.categories))
     socbuttons = socbutton.objects.filter(is_active=True)
     tipe_kurss = tipe_kurs.objects.filter(is_active=True)
