@@ -102,7 +102,7 @@ def tipe_kurs_page(request, slug ):
     #print(password_from_bd_for_kurs)
     return render(request, 'tipe_kurs_page.html', locals())
     
-def tipe_product_page(request, product_id ):
+def tipe_product_page(request, slug ):
     boss_say = helful_information.objects.get(english_name = 'boss_say')
     adres = helful_information.objects.get(english_name = 'adres')
     description_meta = helful_information.objects.get(english_name = 'description')
@@ -116,7 +116,7 @@ def tipe_product_page(request, product_id ):
     sliders = slider.objects.filter(is_active=True)
     reviewss = reviews.objects.filter(is_active=True)
     socbuttons = socbutton.objects.filter(is_active=True)
-    tipe_product_one=tipe_product.objects.get(id =product_id)
+    tipe_product_one=tipe_product.objects.get(slug = slug)
     return render(request, 'product_page_one.html', locals())    
   
 '''  

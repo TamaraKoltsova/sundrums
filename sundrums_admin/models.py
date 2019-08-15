@@ -218,7 +218,18 @@ class tipe_product(models.Model):
       class Meta:
         verbose_name = 'Товар'
         verbose_name_plural = 'Товары'  
-               
+        #'''  
+      def __str__(self):
+        return self.name
+
+      def __unicode__(self):
+        return self.name
+  
+      def save(self):
+        #self.slug = '{0}-{1}'.format(self.pk, slugify(self.descrioptions_for_title))  # Статья будет отображаться в виде NN-АА-АААА
+        mass_for_slug = '{0}-{1}'.format(self.pk, slugify(self.name))  # Статья будет отображаться в виде NN-АА-АААА
+        self.slug = mass_for_slug[2:]
+        super(tipe_product, self).save()       
 class product_video(models.Model):
       name = models.CharField(max_length = 64, blank=True,   null=True, default='', verbose_name= 'имя видео' )
       video_link = models.CharField(max_length = 64, blank=True,   null=True, default='', verbose_name= 'ссылка на видео из ютуба' )

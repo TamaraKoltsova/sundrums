@@ -12,7 +12,7 @@
         </header>
         <div class="row portfolio-container">
 {% for prod in categ.product.all %}
-<a style="margin-right: 20pt;" href="{% url 'product_page' prod.id %}" 
+<a style="margin-right: 20pt;" href="{% url 'serteficat' prod.slug %}" 
 class="link-details" title="More Details">
               
           <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
