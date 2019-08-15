@@ -58,7 +58,7 @@ def one_post_simple(request, slug):
     
     Post_one = get_object_or_404(Posts, slug=slug)
     print(  "номер такой"   ,Post_one.categories_id)
-    name_for_categories= Post_categories.objects.get( id = int(Post_one.categories))
+    name_for_categories= Post_categories.objects.get( id = int(Post_one.categories_3))
     socbuttons = socbutton.objects.filter(is_active=True)
     tipe_kurss = tipe_kurs.objects.filter(is_active=True)
     return render(request, 'one_post_simple.html', locals())#
