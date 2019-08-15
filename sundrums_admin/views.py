@@ -282,7 +282,7 @@ def tipe_posts_korporativnye_treningi(request):
     Post_categoriess = Post_categories.objects.filter(is_active=True)
     #Post_categories_tipe = Post_categories.objects.get(id = post_id)
     Post_categories_tipe = Posts.objects.filter(categories_id = 4)
-    Post_categories_name = Post_categories.objects.get(id = 5)
+    Post_categories_name = Post_categories.objects.get(id = 4)
     reviewss = reviews.objects.filter(is_active=True)
     socbuttons = socbutton.objects.filter(is_active=True)
     tipe_kurss = tipe_kurs.objects.filter(is_active=True)
