@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <title>{{Post_one.descrioptions_for_title}}</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
- 
+ {{Post_categories_name.name}}
    
   <meta content="{{Post_one.descrioptions_for_descriptions}}" name="description">
  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -20,7 +20,8 @@
 
   <!-- Bootstrap CSS File -->
   <link href="{% static 'lib/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
-
+ <!-- canonical-->
+  <link rel="canonical" href="http://jemebe.ru/{{Post_categories_name.name}}" />
 
 
   <!-- Libraries CSS Files -->
