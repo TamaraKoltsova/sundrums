@@ -1,0 +1,62 @@
+{%extends "base_for_serteficat.html"%}
+{%load static%}
+{% block content %}
+{%include "header.html"%}
+{%include "slider.html"%}
+  <main id="main">
+  {%include "director.html"%}
+
+  <!--==========================
+      Call To Action Section
+    ============================-->
+    <section style="" id="call-to-action" class="wow fadeIn">
+      <div class="container text-center">
+        <h3>{{contact_us.name}}</h3>
+        {{contact_us.description|safe}}
+        <a class="cta-btn" href="#contact">Записаться</a>
+      </div>
+    </section><!-- #call-to-action -->
+    <!--==========================
+      Portfolio Section
+    ============================-->
+    <section id="portfolio"  class="section-bg" >
+      <div class="container">
+
+        <header class="section-header">
+          <h3 class="section-title">Выберите раздел</h3>
+        </header>
+        <div class="row portfolio-container">
+{% for Post_categoriesmass in Post_categoriess %}
+         <div class="portfolio-info">
+         <a  href="{% url Post_categoriesmass.slug  %}" class="link-details" title="посмотреть {{Post_categoriesmass.name}}">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
+            <div class="portfolio-wrap">
+              <igure >
+                <img src="{{Post_categoriesmass.image.url}}" class="img-fluid" alt="">
+                <!--<a style="margin-right: 20px;" href="{% url 'tipe_posts' Post_categoriesmass.id %}" class="link-details" title="посмотреть {{Post_categoriesmass.name}}"><i  class="ion ion-eye"></i></a>-->
+              </igure>
+
+              <div class="portfolio-info">
+                <h4><!--<a href="{% url 'tipe_posts' Post_categoriesmass.id %}">{{Post_categoriesmass.name}}</a>-->
+                {{Post_categoriesmass.name}}</h4>
+                <p>{{Post_categoriesmass.descriptions_for_main}}</p>
+              </div>
+            </div>
+          </div>
+          </a>
+          </div>
+{%endfor %}
+        </div>
+      </div>
+    </section><!-- #portfolio -->
+    
+{%include "tipe_kurs.html"%}
+{%include "tipe_product.html"%}      
+{%include "reviews.html"%} 
+{%include "form_contact_us.html"%}
+  </main>
+  
+{%include "footer.html"%}
+
+
+{% endblock %}

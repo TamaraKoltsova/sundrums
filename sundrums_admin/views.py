@@ -55,7 +55,6 @@ def one_post_simple(request, slug):
     reviewss = reviews.objects.filter(is_active=True)
     #Post_one = Posts.objects.get(id = post_id)
     #id_for_categorie = Posts.objects.get(slug = slug)
-    
     Post_one = get_object_or_404(Posts, slug=slug)
     #print(  "номер такой"   ,Post_one.categories_id)
     name_for_categories= Post_categories.objects.get( id = int(Post_one.categories_id))

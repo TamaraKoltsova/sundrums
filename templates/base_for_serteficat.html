@@ -5,13 +5,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>{{title_meta.name_rus}}</title>
+  <title>{{Post_one.descrioptions_for_title}}</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="{{keywords_meta.name_rus}}" name="keywords">
-  <meta content="{{description_meta.name_rus}}" name="description">
-    <!-- canonical-->
-  <link rel="canonical" href="http://jembe.ru" />
  
+   
+  <meta content="{{Post_one.descrioptions_for_descriptions}}" name="description">
  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <!-- Favicons -->
   <link href="{% static 'img/favicon.png'%}" rel="icon">
@@ -22,6 +20,10 @@
 
   <!-- Bootstrap CSS File -->
   <link href="{% static 'lib/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+
+<!-- canonical-->
+  <link rel="canonical" href="http://jembe.ru/{{ tipe_product_one.slug}}" />
+
 
   <!-- Libraries CSS Files -->
   <link  href="{% static 'lib/font-awesome/css/font-awesome.min.css'%}" rel="stylesheet">
@@ -75,7 +77,6 @@
 </head>
 
 <body>
-
 
 {% block content %}
 {% endblock %}
