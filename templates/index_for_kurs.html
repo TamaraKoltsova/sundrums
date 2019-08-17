@@ -13,7 +13,7 @@
       <div class="container text-center">
         <h3>{{contact_us.name}}</h3>
         {{contact_us.description|safe}}
-        <a class="cta-btn" href="#contact">Записаться</a>
+        <a class="cta-btn" href="#contact">Р—Р°РїРёСЃР°С‚СЊСЃСЏ</a>
       </div>
     </section><!-- #call-to-action -->
     <!--==========================
@@ -23,17 +23,17 @@
       <div class="container">
 
         <header class="section-header">
-          <h3 class="section-title">Выберите раздел</h3>
+          <h3 class="section-title">Р’С‹Р±РµСЂРёС‚Рµ СЂР°Р·РґРµР»</h3>
         </header>
         <div class="row portfolio-container">
 {% for Post_categoriesmass in Post_categoriess %}
          <div class="portfolio-info">
-         <a  href="{% url Post_categoriesmass.slug  %}" class="link-details" title="посмотреть {{Post_categoriesmass.name}}">
+         <a  href="{% url Post_categoriesmass.slug  %}" class="link-details" title="РїРѕСЃРјРѕС‚СЂРµС‚СЊ {{Post_categoriesmass.name}}">
           <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
             <div class="portfolio-wrap">
               <igure >
                 <img src="{{Post_categoriesmass.image.url}}" class="img-fluid" alt="">
-                <!--<a style="margin-right: 20px;" href="{% url 'tipe_posts' Post_categoriesmass.id %}" class="link-details" title="посмотреть {{Post_categoriesmass.name}}"><i  class="ion ion-eye"></i></a>-->
+                <!--<a style="margin-right: 20px;" href="{% url 'tipe_posts' Post_categoriesmass.id %}" class="link-details" title="РїРѕСЃРјРѕС‚СЂРµС‚СЊ {{Post_categoriesmass.name}}"><i  class="ion ion-eye"></i></a>-->
               </igure>
 
               <div class="portfolio-info">
