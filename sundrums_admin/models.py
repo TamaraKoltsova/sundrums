@@ -103,6 +103,10 @@ class tipe_kurs(models.Model):
       info_kurs = HTMLField(        blank=True,   null=True, default= ' ', verbose_name= ' описание' )
       image = models.ImageField(      blank=True,    upload_to='static/media/kurs_images/', help_text = 'фото преподователя',   verbose_name=  'фото преподавателя' )
       slug = models.CharField(verbose_name='Транслит', max_length=200, blank=True)  # Поле для записи ссылки
+      descrioptions_for_seo = models.CharField(      max_length = 264, blank=True,   null=True, default= ' ', verbose_name= 'h1 для сео' )
+      descrioptions_for_title = models.CharField(      max_length = 264, blank=True,   null=True, default= ' ', verbose_name= 'title для сео' )
+      descrioptions_for_descriptions = models.CharField(      max_length = 264, blank=True,   null=True, default= ' ', verbose_name= 'descriptions для сео' )
+      description_for_main = models.CharField(      max_length = 255, blank=True,   null=True, default= ' ', verbose_name= 'описание для разделов на главной в плитках' )
       teacher_kurs = models.ForeignKey(teacher, on_delete=models.SET_NULL, related_name = 'kurs',   null=True,         verbose_name= ' преподаватель' )
       password = models.CharField(      max_length = 64, blank=True,   null=True, default= '0', verbose_name= 'пароль для открытия статии (если оставить 0 то пароль запрашиваться не будет)) ' )
       
@@ -197,6 +201,10 @@ class categories_product(models.Model):
       name = models.CharField(      max_length = 64, blank=True,   null=True, default= ' ', verbose_name= 'имя категории ' )
       name_ing = models.CharField(      max_length = 64, blank=True,   null=True, default= ' ', verbose_name= 'имя категории на английском для фильтра ' )
       slug = models.CharField(verbose_name='Транслит', max_length=200, blank=True)  # Поле для записи ссылки
+      descrioptions_for_seo = models.CharField(      max_length = 264, blank=True,   null=True, default= ' ', verbose_name= 'h1 для сео' )
+      descrioptions_for_title = models.CharField(      max_length = 264, blank=True,   null=True, default= ' ', verbose_name= 'title для сео' )
+      descrioptions_for_descriptions = models.CharField(      max_length = 264, blank=True,   null=True, default= ' ', verbose_name= 'descriptions для сео' )
+      description_for_main = models.CharField(      max_length = 255, blank=True,   null=True, default= ' ', verbose_name= 'описание для разделов на главной в плитках' )
       is_active = models.BooleanField(              default='True', verbose_name= 'вкл?' )
       def __str__(self):
        return "категории товаров: %s" % (self.name)
@@ -208,6 +216,10 @@ class tipe_product(models.Model):
       name = models.CharField(      max_length = 64, blank=True,   null=True, default= ' ', verbose_name= 'имя товара ' )
       info_product = HTMLField(        blank=True,   null=True, default= ' ', verbose_name= ' описание' )
       slug = models.CharField(verbose_name='Транслит', max_length=200, blank=True)  # Поле для записи ссылки
+      descrioptions_for_seo = models.CharField(      max_length = 264, blank=True,   null=True, default= ' ', verbose_name= 'h1 для сео' )
+      descrioptions_for_title = models.CharField(      max_length = 264, blank=True,   null=True, default= ' ', verbose_name= 'title для сео' )
+      descrioptions_for_descriptions = models.CharField(      max_length = 264, blank=True,   null=True, default= ' ', verbose_name= 'descriptions для сео' )
+      description_for_main = models.CharField(      max_length = 255, blank=True,   null=True, default= ' ', verbose_name= 'описание для разделов на главной в плитках' )
       image = models.ImageField(      blank=True,    upload_to='static/media/kproduct_images/', help_text = 'фото преподователя',   verbose_name=  'фото товара' )
       categories_product = models.ForeignKey(categories_product, on_delete=models.SET_NULL, related_name = 'product',   null=True,         verbose_name= 'категория товара' )
       #password = models.CharField(      max_length = 64, blank=True,   null=True, default= '0', verbose_name= 'пароль для открытия статии (если оставить 0 то пароль запрашиваться не будет)) ' )
