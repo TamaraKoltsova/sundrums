@@ -19,10 +19,10 @@
             
             </ul>
             {% for Post_categoriesmass in Post_categoriess %}
-            <li class="menu-has-children"><a href="{% url  Post_categoriesmass.slug Post_categoriesmass.id %}">{{Post_categoriesmass.name}}</a>
+            <li class="menu-has-children"><a href="{% url  Post_categoriesmass.slug  %}">{{Post_categoriesmass.name}}</a>
              <ul>
               {% for post in Post_categoriesmass.post.all%}
-              <a href="{% url  Post_categoriesmass.slug post.id %}">{{post.name}}</a><br />
+              <a href="{% url  Post_categoriesmass.slug post.slug %}">{{post.name}}</a><br />
               {%endfor%}
             </ul>
            {%endfor %} 
