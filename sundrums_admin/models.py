@@ -34,6 +34,10 @@ class Post_categories(models.Model):
       description = HTMLField(        blank=False,   null=True, default= ' ', verbose_name= 'описание категории сюда можно поместить целую статью в html ' )
       image = models.ImageField(      blank=True,    upload_to='static/media/categories_images/', help_text = 'загрузите сюда изображение для категории это будет в плитках навигации',   verbose_name= ' главное изображение для категории' )
       slug = models.CharField(verbose_name='Транслит', max_length=200, blank=True)  # Поле для записи ссылки
+      descrioptions_for_seo = models.CharField(      max_length = 264, blank=True,   null=True, default= ' ', verbose_name= 'h1 для сео' )
+      descrioptions_for_title = models.CharField(      max_length = 264, blank=True,   null=True, default= ' ', verbose_name= 'title для сео' )
+      descrioptions_for_descriptions = models.CharField(      max_length = 264, blank=True,   null=True, default= ' ', verbose_name= 'descriptions для сео' )
+      description_for_main = models.CharField(      max_length = 255, blank=True,   null=True, default= ' ', verbose_name= 'описание для разделов на главной в плитках' )
       is_active = models.BooleanField(              default='True', verbose_name= 'Включить категорию на сайт? ' )
       def __str__(self):
        return "Категория: %s" % (self.name)
