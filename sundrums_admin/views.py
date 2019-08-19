@@ -297,7 +297,7 @@ def perezapolnit(request):
     Posts_mass = Posts.objects.filter(is_active=True)
     #print(Posts_mass)
     for post in Posts_mass:
-        Posts.objects.get(id = str(post.id)).update(descrioptions_for_title = str(post.name), descrioptions_for_seo = str(post.name), descrioptions_for_descriptions = str(post.name) )
+        Posts.objects.filter(id = str(post.id)).update(descrioptions_for_title = str(post.name), descrioptions_for_seo = str(post.name), descrioptions_for_descriptions = str(post.name) )
     return HttpResponse("автоматическое заполнение полей h1 title description закончено")   
     
     
