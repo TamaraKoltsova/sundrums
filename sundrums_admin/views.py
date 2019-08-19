@@ -296,10 +296,10 @@ def tipe_posts_korporativnye_treningi(request):
 def perezapolnit(request):
     #Posts_mass = Posts.objects.filter(is_active=True)
     #Posts_mass = tipe_kurs.objects.filter(is_active=True)
-    Posts_mass = Post_categories.objects.filter(is_active=True)
+    Posts_mass = tipe_product.objects.filter(is_active=True)
     #print(Posts_mass)
     for post in Posts_mass:
-        Post_categories.objects.filter(id = str(post.id)).update(descrioptions_for_title = str(post.name), descrioptions_for_seo = str(post.name), descrioptions_for_descriptions = str(post.name) )
+        tipe_product.objects.filter(id = str(post.id)).update(descrioptions_for_title = str(post.name), descrioptions_for_seo = str(post.name), descrioptions_for_descriptions = str(post.name) )
     return HttpResponse("автоматическое заполнение полей h1 title description закончено")   
     
     
