@@ -290,3 +290,14 @@ def tipe_posts_korporativnye_treningi(request):
     socbuttons = socbutton.objects.filter(is_active=True)
     tipe_kurss = tipe_kurs.objects.filter(is_active=True)
     return render(request, 'tipe_posts.html', locals())# 
+    
+    
+# автоматическое заполнение post полей h1 title description     
+def perezapolnit(request):
+    Posts_mass = Posts.objects.filter(is_active=True)
+    print(Posts_mass)
+    for post in Posts_mass:
+        Posts.objects.filter(id = post.id ,descrioptions_for_title = '').update(descrioptions_for_title = post.name, descrioptions_for_seo = post.name, descrioptions_for_descriptions = post.name )
+    return HttpResponse("автоматическое заполнение полей h1 title description закончено")   
+    
+    
