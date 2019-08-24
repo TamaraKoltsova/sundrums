@@ -97,7 +97,7 @@ class Posts(models.Model):
         #return reverse('posts',args = [str(self.id)])
         slug_for_return = Post_categories.objects.filter(slug = self.categories)
         
-        return reverse('slug_for_return.slug',args = [str(self.slug)])
+        return reverse(str(slug_for_return.slug),args = [str(self.slug)])
         #'''
 class teacher(models.Model):
       name = models.CharField(      max_length = 64, blank=True,   null=True, default= ' ', verbose_name= 'ФИО ' )
