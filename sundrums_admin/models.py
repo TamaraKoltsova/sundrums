@@ -96,7 +96,7 @@ class Posts(models.Model):
       def get_absolute_url(self):
         #return reverse('posts',args = [str(self.id)])
         slug_for_return = Post_categories.objects.filter(slug = self.categories)
-        
+        print ('  !!!!!!!!!!!!!!! Slug == ',slug_for_return  )
         return reverse(str(slug_for_return[0].slug),args = [str(self.slug)])
         #'''
 class teacher(models.Model):
