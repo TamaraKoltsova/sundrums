@@ -95,7 +95,7 @@ class Posts(models.Model):
         
       def get_absolute_url(self):
         #return reverse('posts',args = [str(self.id)])
-        return reverse(self.categories_slug,args = [str(self.slug)])
+        return reverse(self.categories_id,args = [str(self.slug)])
         #'''
 class teacher(models.Model):
       name = models.CharField(      max_length = 64, blank=True,   null=True, default= ' ', verbose_name= 'ФИО ' )
