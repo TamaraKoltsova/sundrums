@@ -94,28 +94,8 @@ class Posts(models.Model):
         super(Posts, self).save()
         
       def get_absolute_url(self):
-        #return reverse('posts',args = [str(self.id)])
-        slug_for_return = Post_categories.objects.filter(slug = self.categories)
-        print ('  !!!!!!!!!!!!!!! Slug == ',slug_for_return.slug  )
+        return reverse('posts',args = [str(self.slug)])
         
-        if (self.categories == 4){
-        return reverse('korporativnye-treningi',args = [str(self.slug)])    
-        }
-        if (self.categories == 5){
-        return reverse('sobytiia',args = [str(self.slug)])    
-        }
-        if (self.categories == 6){
-        return reverse('novosti',args = [str(self.slug)])    
-        }
-        if (self.categories == 7){
-        return reverse('entsiklopediia',args = [str(self.slug)])    
-        }
-        if (self.categories == 8){
-        return reverse('magazin',args = [str(self.slug)])    
-        }
-        if (self.categories == 3){
-        return reverse('shkola',args = [str(self.slug)])    
-        }
         
         #return reverse(str(slug_for_return[0].slug),args = [str(self.slug)])
         #'''
