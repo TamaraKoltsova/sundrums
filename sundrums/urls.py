@@ -4,7 +4,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path
 from django.views.generic import TemplateView
-from sundrums_admin.sitemaps import PostsSitemap
+from sundrums_admin.sitemaps import *
 from django.contrib.sitemaps.views import sitemap
 from sundrums_admin import views
 #dicthonari for posts
