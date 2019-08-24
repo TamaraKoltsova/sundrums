@@ -3,7 +3,7 @@ from  .models import *
 #Post_categorie
 #Posts
 
-class PostsSitemap(Sitemap):
+class PostsSitemap(sitemap):
     
     def items(self):
         return Posts.objects.all()
