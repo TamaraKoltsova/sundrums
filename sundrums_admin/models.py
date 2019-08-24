@@ -2,7 +2,7 @@ from tinymce.models import HTMLField
 from django.db import models
 from uuslug import slugify  # Это библиотека для преобразования заголовков в ссылки django-uuslug
 from django.contrib.sites.models import Site
-#from django.core.urlresolvers import reverse
+from django.urls import reverse
 class masseger(models.Model):
       name = models.CharField(max_length = 64, blank=True,   null=True, default= ' ', verbose_name= ' ФИО' )
       subject = models.CharField(max_length = 64, blank=True,   null=True, default= ' ', verbose_name= 'тема сообщения ' )
