@@ -9,7 +9,8 @@ from django.contrib.sitemaps.views import sitemap
 from sundrums_admin import views
 #dicthonari for posts
 sitemaps = {
-    'posts' : Post_categoriesSitemap,
+    'Post_categories' : Post_categoriesSitemap,
+    'Posts' : PostsSitemap,
 }
 
 
@@ -29,7 +30,14 @@ urlpatterns = [
    url(r'^korporativnye-treningi/$', views.tipe_posts_korporativnye_treningi, name='korporativnye-treningi'),
    url(r'^shkola/$', views.tipe_posts_shkola, name='shkola'),
    #тестирую ссылки первого уровня
-   
+      #тестирую ссылки второго уровня
+   url(r'^magazin/(?P<slug>.+)/$', views.one_post_simple, name='magazin'),
+   url(r'^entsiklopediia/(?P<slug>.+)/$', views.one_post_simple, name='entsiklopediia'),
+   url(r'^novosti/(?P<slug>.+)/$', views.one_post_simple, name='novosti'),
+   url(r'^sobytiia/(?P<slug>.+)/$', views.one_post_simple, name='sobytiia'),
+   url(r'^korporativnye-treningi/(?P<slug>.+)/$', views.one_post_simple, name='korporativnye-treningi'),
+   url(r'^shkola/(?P<slug>.+)/$', views.one_post_simple, name='shkola'),
+   #тестирую ссылки второго уровня
    
    
    

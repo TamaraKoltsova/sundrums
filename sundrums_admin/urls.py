@@ -7,23 +7,7 @@ urlpatterns = [
    url(r'^tipe_posts/(?P<post_id>\w+)/', views.tipe_posts, name='tipe_posts'),
    
    
-    #тестирую ссылки первого уровня для переxода на главные ветки
-   url(r'^magazin/$', views.tipe_posts_magazin, name='magazin'),
-   url(r'^entsiklopediia/$', views.tipe_posts_entsiklopediia, name='entsiklopediia'),
-   url(r'^novosti/$', views.tipe_posts_novosti, name='novosti'),
-   url(r'^sobytiia/$', views.tipe_posts_sobytiia, name='sobytiia'),
-   url(r'^korporativnye-treningi/$', views.tipe_posts_korporativnye_treningi, name='korporativnye-treningi'),
-   url(r'^shkola/$', views.tipe_posts_shkola, name='shkola'),
-   #тестирую ссылки первого уровня
-   
-   #тестирую ссылки первого уровня
-   url(r'^magazin/(?P<slug>.+)/$', views.one_post_simple, name='magazin'),
-   url(r'^entsiklopediia/(?P<slug>.+)/$', views.one_post_simple, name='entsiklopediia'),
-   url(r'^novosti/(?P<slug>.+)/$', views.one_post_simple, name='novosti'),
-   url(r'^sobytiia/(?P<slug>.+)/$', views.one_post_simple, name='sobytiia'),
-   url(r'^korporativnye-treningi/(?P<slug>.+)/$', views.one_post_simple, name='korporativnye-treningi'),
-   url(r'^shkola/(?P<slug>.+)/$', views.one_post_simple, name='shkola'),
-   #тестирую ссылки первого уровня
+    
    
   
    
