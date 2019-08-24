@@ -4,7 +4,7 @@ from  .models import *
 #Posts
 
 
-"""
+
 class PostsSitemap(Sitemap):
     
     def items(self):
@@ -14,4 +14,5 @@ class PostsSitemap(Sitemap):
 class Post_categoriesSitemap(Sitemap):
     
     def items(self):
-        return Post_categories.objects.all()     
+        return Post_categories.objects.all() 
+"""            
