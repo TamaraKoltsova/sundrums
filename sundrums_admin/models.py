@@ -95,7 +95,7 @@ class Posts(models.Model):
         
       def get_absolute_url(self):
         #return reverse('posts',args = [str(self.id)])
-        slug_for_return = Post_categories.objects.get(slug = self.categories)
+        slug_for_return = Post_categories.objects.filter(slug = self.categories)
         
         return reverse('slug_for_return.slug',args = [str(self.slug)])
         #'''
