@@ -1,4 +1,4 @@
-from django.contrib.sitemaps.views import Sitemap
+from django.contrib.sitemaps import Sitemap
 from  .models import *
 #Post_categorie
 #Posts
