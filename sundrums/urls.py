@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 from django.urls import path
 from django.views.generic import TemplateView
 from sundrums_admin.sitemaps import PostsSitemap
-
+from django.contrib.sitemaps.views import sitemap
 
 #dicthonari for posts
 sitemaps = {
@@ -17,7 +17,7 @@ sitemaps = {
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^', include('sundrums_admin.urls')),
-    path('sitemap.xml',sitemaps, {'sitemaps':sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
+    path('sitemap.xml',sitemap, {'sitemaps':sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     path(r'robots.txt', TemplateView.as_view(template_name='robots.txt', content_type='text/plain'),name='robots.txt'),
     url(r'^tinymce/', include('tinymce.urls')),
     url(r'mailer/', include('mailer.urls', namespace='mailer')),
