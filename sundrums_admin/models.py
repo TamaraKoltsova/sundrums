@@ -94,8 +94,7 @@ class Posts(models.Model):
         super(Posts, self).save()
         
       def get_absolute_url(self):
-        return reverse('posts',args = [str(self.slug)])
-        
+        return reverse('shkola',args = [str(self.slug)])
         
         
         #return reverse(str(slug_for_return[0].slug),args = [str(self.slug)])
