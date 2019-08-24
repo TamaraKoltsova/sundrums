@@ -6,7 +6,7 @@ from django.urls import path
 from django.views.generic import TemplateView
 from sundrums_admin.sitemaps import PostsSitemap
 from django.contrib.sitemaps.views import sitemap
-from . import views
+from sundrums_admin import views
 #dicthonari for posts
 sitemaps = {
     'posts' : PostsSitemap,
