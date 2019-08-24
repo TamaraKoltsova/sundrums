@@ -1,6 +1,7 @@
 from tinymce.models import HTMLField
 from django.db import models
 from uuslug import slugify  # Это библиотека для преобразования заголовков в ссылки django-uuslug
+from django.contrib.sites.models import Site
 
 class masseger(models.Model):
       name = models.CharField(max_length = 64, blank=True,   null=True, default= ' ', verbose_name= ' ФИО' )
@@ -88,6 +89,9 @@ class Posts(models.Model):
         mass_for_slug = '{0}-{1}'.format(self.pk, slugify(self.name))  # Статья будет отображаться в виде NN-АА-АААА
         self.slug = mass_for_slug[3:]
         super(Posts, self).save()
+        
+      def get_absolute_url(self):
+        return reverse('posts',args = [str(self.id)])
         #'''
 class teacher(models.Model):
       name = models.CharField(      max_length = 64, blank=True,   null=True, default= ' ', verbose_name= 'ФИО ' )
