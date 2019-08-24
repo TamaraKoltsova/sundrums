@@ -9,7 +9,7 @@ from django.contrib.sitemaps.views import sitemap
 from sundrums_admin import views
 #dicthonari for posts
 sitemaps = {
-    'posts' : PostsSitemap,
+    'posts' : Post_categoriesSitemap,
 }
 
 
