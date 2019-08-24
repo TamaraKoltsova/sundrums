@@ -58,7 +58,7 @@ class Post_categories(models.Model):
         super(Post_categories, self).save()
         
       def get_absolute_url(self):
-         return reverse('post_categories',args = [str(self.id)])   
+         return reverse(self.slug)   
 class Posts(models.Model):
       name = models.CharField(      max_length = 255, blank=True,   null=True, default= ' ', verbose_name= 'имя статьи кратко это будет в меню навигации' )
       descrioptions_for_seo = models.CharField(      max_length = 264, blank=True,   null=True, default= ' ', verbose_name= 'h1 для сео' )
