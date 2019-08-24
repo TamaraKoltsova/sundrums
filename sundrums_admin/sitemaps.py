@@ -15,4 +15,5 @@ class Post_categoriesSitemap(Sitemap):
     
     def items(self):
         return Post_categories.objects.all() 
+"""        
            

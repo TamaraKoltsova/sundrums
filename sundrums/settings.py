@@ -143,12 +143,12 @@ STATICFILES_DIRS = (
   os.path.join(BASE_DIR, "static","asset" ),
 )
 
-#для админки
+#РґР»СЏ Р°РґРјРёРЅРєРё
 STATIC_ROOT = os.path.join(BASE_DIR, "static" ,"asset")
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "static", "media")
 
-#для админки в интернете 
+#РґР»СЏ Р°РґРјРёРЅРєРё РІ РёРЅС‚РµСЂРЅРµС‚Рµ 
 
 #STATIC_ROOT = os.path.join(BASE_DIR, "static",)
 
