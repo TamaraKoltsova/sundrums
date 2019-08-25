@@ -307,5 +307,5 @@ def perezapolnit(request):
         #tipe_product.objects.filter(id = str(post.id)).update(slug_categories = str(post.name))
         
     return HttpResponse("автоматическое заполнение полей h1 title description закончено")   
-    
+"""    
     
