@@ -10,7 +10,7 @@ from sundrums_admin import views
 #dicthonari for posts
 sitemaps = {
     'Post_categories' : Post_categoriesSitemap,
-    'Posts' : PostsSitemap,
+    #'Posts' : PostsSitemap,
 }
 
 
