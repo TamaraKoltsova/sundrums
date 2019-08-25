@@ -66,6 +66,7 @@ class Posts(models.Model):
       descrioptions_for_descriptions = models.CharField(      max_length = 264, blank=True,   null=True, default= ' ', verbose_name= 'descriptions для сео' )
       description_for_main = models.CharField(      max_length = 255, blank=True,   null=True, default= ' ', verbose_name= 'описание для разделов на главной в плитках' )
       slug = models.CharField(verbose_name='Транслит', max_length=200, blank=True)  # Поле для записи ссылки
+      slug_categories = models.CharField(verbose_name='Транслит категории к которой принадлежит этот пост', max_length=200, blank=True)  # Поле для записи ссылки
       image = models.ImageField(      blank=True,    upload_to='static/media/post_images/', help_text = 'загрузите сюда изображение для категории это будет в плитках навигации',   verbose_name= ' главное изображение для отдельных статей' )
       description = HTMLField(      blank=True,   null=True, default= ' ', verbose_name= ' все описание статьи можно вставлять код html целиком' )
       categories = models.ForeignKey(Post_categories, on_delete=models.SET_NULL, related_name = 'post' ,  blank=True,   null=True, default= ' ', verbose_name= ' ' )
