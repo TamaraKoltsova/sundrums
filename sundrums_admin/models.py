@@ -88,11 +88,11 @@ class Posts(models.Model):
       def __unicode__(self):
         return self.name
   
-      def save(self):
+      #def save(self):
         #self.slug = '{0}-{1}'.format(self.pk, slugify(self.descrioptions_for_title))  # Статья будет отображаться в виде NN-АА-АААА
-        mass_for_slug = '{0}-{1}'.format(self.pk, slugify(self.name))  # Статья будет отображаться в виде NN-АА-АААА
-        self.slug = mass_for_slug[3:]
-        super(Posts, self).save()
+        #mass_for_slug = '{0}-{1}'.format(self.pk, slugify(self.name))  # Статья будет отображаться в виде NN-АА-АААА
+        #self.slug = mass_for_slug[3:]
+        #super(Posts, self).save()
         
       def get_absolute_url(self):
         return reverse(str(self.slug_categories),args = [str(self.slug)])
