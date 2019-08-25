@@ -4,13 +4,13 @@ from  .models import *
 #Posts
 
 
-""" 
+
 class PostsSitemap(Sitemap):
     
     def items(self):
         return Posts.objects.all()
    
-"""
+
 class Post_categoriesSitemap(Sitemap):
     
     def items(self):

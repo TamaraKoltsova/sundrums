@@ -294,7 +294,7 @@ def tipe_posts_korporativnye_treningi(request):
     
 # автоматическое заполнение post полей h1 title description     
 
-
+"""
 def perezapolnit(request):
     Posts_mass = Posts.objects.filter(is_active=True)
     #Posts_mass = tipe_kurs.objects.filter(is_active=True)

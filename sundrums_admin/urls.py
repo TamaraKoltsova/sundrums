@@ -21,7 +21,7 @@ urlpatterns = [
     
    url(r'^img/', views.img_load, name='img'),
    url(r'^massegers/', views.massegers, name='massegers'),
-   url(r'^perezapolnit/', views.perezapolnit, name='perezapolnit'),
+   #url(r'^perezapolnit/', views.perezapolnit, name='perezapolnit'),
    
    url(r'contact_p/massegers/', views.massegers,),
    url(r'^contact_p/', views.contact_page, name='contact_p'),

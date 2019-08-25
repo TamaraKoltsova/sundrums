@@ -94,8 +94,8 @@ class Posts(models.Model):
         self.slug = mass_for_slug[3:]
         super(Posts, self).save()
         
-      #def get_absolute_url(self):
-        #return reverse('shkola',args = [str(self.slug)])
+      def get_absolute_url(self):
+        return reverse(str(self.slug_categories),args = [str(self.slug)])
         
         
         #return reverse(str(slug_for_return[0].slug),args = [str(self.slug)])
