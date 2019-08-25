@@ -301,7 +301,7 @@ def perezapolnit(request):
     #Posts_mass = tipe_product.objects.filter(is_active=True)
     #print(Posts_mass)
     for post in Posts_mass:
-        slug_categories = Post_categories.objects.get(id = Posts_mass.categories)
+        slug_categories = Post_categories.objects.get(id = posts.categories)
         print ( '!!!!!!!!!!!!!Translit = '  ,slug_categories.slug) 
         #tipe_product.objects.filter(id = str(post.id)).update(descrioptions_for_title = str(post.name), descrioptions_for_seo = str(post.name), descrioptions_for_descriptions = str(post.name) )
         #tipe_product.objects.filter(id = str(post.id)).update(slug_categories = str(post.name))
