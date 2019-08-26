@@ -12,7 +12,7 @@ sitemaps = {
     'Post_categories' : Post_categoriesSitemap,
     'Posts' : PostsSitemap,
     'tipe_product' : tipe_productSitemap,
-    'tipe_kurs'  : tipe_kursSitemap,
+    #'tipe_kurs'  : tipe_kursSitemap,
 }
 
 
