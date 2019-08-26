@@ -151,7 +151,7 @@ class tipe_kurs(models.Model):
       #- добавление чпу  
         # + добавление sitemap  
       def get_absolute_url(self):
-         return reverse('kursi',self.slug)
+         return reverse('kursi',args = [str(self.slug)])
        # - добавление sitemap    
         
         
