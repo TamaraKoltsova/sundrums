@@ -45,7 +45,7 @@ class Post_categories(models.Model):
       class Meta:
         verbose_name = 'Категория'
         verbose_name_plural = 'Категории'
-      
+      #+ добавление чпу
       def __str__(self):
         return self.name
 
@@ -56,9 +56,12 @@ class Post_categories(models.Model):
         mass_for_slug = '{0}-{1}'.format(self.pk, slugify(self.name))  
         self.slug = mass_for_slug[2:]
         super(Post_categories, self).save()
-        
+       #- добавление чпу 
+       
+       # + добавление sitemap  
       def get_absolute_url(self):
-         return reverse(self.slug)   
+         return reverse(self.slug)
+       # - добавление sitemap      
 class Posts(models.Model):
       name = models.CharField(      max_length = 255, blank=True,   null=True, default= ' ', verbose_name= 'имя статьи кратко это будет в меню навигации' )
       descrioptions_for_seo = models.CharField(      max_length = 264, blank=True,   null=True, default= ' ', verbose_name= 'h1 для сео' )
@@ -71,6 +74,7 @@ class Posts(models.Model):
       description = HTMLField(      blank=True,   null=True, default= ' ', verbose_name= ' все описание статьи можно вставлять код html целиком' )
       categories = models.ForeignKey(Post_categories, on_delete=models.SET_NULL, related_name = 'post' ,  blank=True,   null=True, default= ' ', verbose_name= ' ' )
       is_active = models.BooleanField(              default='True', verbose_name= ' выложить статью на сайт ' )
+      
       def __str__(self):
        return "Статья: %s" % (self.name)
       class Meta:
@@ -81,7 +85,7 @@ class Posts(models.Model):
       class Meta:
         verbose_name = 'Статья'
         verbose_name_plural = 'Статьи'
-      #'''  
+      #+ добавление чпу
       def __str__(self):
         return self.name
 
@@ -93,7 +97,8 @@ class Posts(models.Model):
         #mass_for_slug = '{0}-{1}'.format(self.pk, slugify(self.name))  # Статья будет отображаться в виде NN-АА-АААА
         #self.slug = mass_for_slug[3:]
         #super(Posts, self).save()
-        
+      #-добавление чпу 
+      
       def get_absolute_url(self):
         return reverse(str(self.slug_categories),args = [str(self.slug)])
         
@@ -124,14 +129,14 @@ class tipe_kurs(models.Model):
       description_for_main = models.CharField(      max_length = 255, blank=True,   null=True, default= ' ', verbose_name= 'описание для разделов на главной в плитках' )
       teacher_kurs = models.ForeignKey(teacher, on_delete=models.SET_NULL, related_name = 'kurs',   null=True,         verbose_name= ' преподаватель' )
       password = models.CharField(      max_length = 64, blank=True,   null=True, default= '0', verbose_name= 'пароль для открытия статии (если оставить 0 то пароль запрашиваться не будет)) ' )
-      
       is_active = models.BooleanField(              default='True', verbose_name= 'Курс активен?' )
+      
       def __str__(self):
        return "Курс: %s" % (self.name)
       class Meta:
         verbose_name = 'Курс'
         verbose_name_plural = 'Курсы'
-      #'''  
+      #+ добавление чпу  
       def __str__(self):
         return self.name
 
@@ -143,6 +148,13 @@ class tipe_kurs(models.Model):
         mass_for_slug = '{0}-{1}'.format(self.pk, slugify(self.name))  # Статья будет отображаться в виде NN-АА-АААА
         self.slug = mass_for_slug[2:]
         super(tipe_kurs, self).save()
+      #- добавление чпу  
+        # + добавление sitemap  
+      def get_absolute_url(self):
+         return reverse('kursi',self.slug)
+       # - добавление sitemap    
+        
+        
 class apprentice(models.Model):
       name = models.CharField(      max_length = 64, blank=True,   null=True, default= ' ', verbose_name= ' ФИО' )
       tel = models.CharField(      max_length = 64, blank=True,   null=True, default= ' ', verbose_name= ' номер телефона' )
@@ -256,7 +268,12 @@ class tipe_product(models.Model):
         #self.slug = '{0}-{1}'.format(self.pk, slugify(self.descrioptions_for_title))  # Статья будет отображаться в виде NN-АА-АААА
         mass_for_slug = '{0}-{1}'.format(self.pk, slugify(self.name))  # Статья будет отображаться в виде NN-АА-АААА
         self.slug = mass_for_slug[2:]
-        super(tipe_product, self).save()       
+        super(tipe_product, self).save() 
+        
+          
+      def get_absolute_url(self):
+        return reverse('serteficat',args = [str(self.slug)])      
+
 class product_video(models.Model):
       name = models.CharField(max_length = 64, blank=True,   null=True, default='', verbose_name= 'имя видео' )
       video_link = models.CharField(max_length = 64, blank=True,   null=True, default='', verbose_name= 'ссылка на видео из ютуба' )

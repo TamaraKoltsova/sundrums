@@ -11,6 +11,8 @@ from sundrums_admin import views
 sitemaps = {
     'Post_categories' : Post_categoriesSitemap,
     'Posts' : PostsSitemap,
+    'tipe_product' : tipe_productSitemap,
+    'tipe_kurs'  : tipe_kursSitemap,
 }
 
 
