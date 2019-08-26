@@ -150,8 +150,8 @@ class tipe_kurs(models.Model):
         super(tipe_kurs, self).save()
       #- добавление чпу  
         # + добавление sitemap  
-      #def get_absolute_url(self):
-         #return reverse('kursi',self.slug)
+      def get_absolute_url(self):
+         return reverse('kursi',self.slug)
        # - добавление sitemap    
         
         
