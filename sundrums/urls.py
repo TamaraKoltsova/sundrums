@@ -40,7 +40,10 @@ urlpatterns = [
    url(r'^korporativnye-treningi/(?P<slug>.+)/$', views.one_post_simple, name='korporativnye-treningi'),
    url(r'^shkola/(?P<slug>.+)/$', views.one_post_simple, name='shkola'),
    #тестирую ссылки второго уровня
-   
+   url(r'^kursi/(?P<slug>.+)/', views.tipe_kurs_page, name='kursi'),
+   #url(r'^product_page/(?P<product_id>\w+)/', views.tipe_product_page, name='product_page'),
+   url(r'^serteficat/(?P<slug>.+)/', views.tipe_product_page, name='serteficat'),
+    
    
    
    
