@@ -62,7 +62,7 @@ class PostsAdmin (admin.ModelAdmin):
       list_display = [field.name for field in Posts._meta.fields]
       #inlines = [NoneInline,]
       #fields = []
-      exclude = ['categories']
+       #exclude = ['categories']
       #list_fields = ['']
       #searh_fields = ['']
       class Meta:

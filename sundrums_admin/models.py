@@ -72,7 +72,7 @@ class Posts(models.Model):
       slug_categories = models.CharField(verbose_name='Транслит категории к которой принадлежит этот пост', max_length=200, blank=True)  # Поле для записи ссылки
       image = models.ImageField(      blank=True,    upload_to='static/media/post_images/', help_text = 'загрузите сюда изображение для категории это будет в плитках навигации',   verbose_name= ' главное изображение для отдельных статей' )
       description = HTMLField(      blank=True,   null=True, default= ' ', verbose_name= ' все описание статьи можно вставлять код html целиком' )
-      categories = models.ForeignKey(Post_categories, on_delete=models.SET_NULL, related_name = 'post' ,  blank=True,   null=True, default= ' ', verbose_name= ' ' )
+      categories = models.ForeignKey(Post_categories, on_delete=models.SET_NULL, related_name = 'post' ,  blank=True,   null=True, default= ' ', verbose_name= ' связь ' )
       is_active = models.BooleanField(              default='True', verbose_name= ' выложить статью на сайт ' )
       
       def __str__(self):
