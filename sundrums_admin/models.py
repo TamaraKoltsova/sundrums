@@ -51,11 +51,12 @@ class Post_categories(models.Model):
 
       def __unicode__(self):
         return self.name
-  
+      """  
       def save(self):
         mass_for_slug = '{0}-{1}'.format(self.pk, slugify(self.name))  
         self.slug = mass_for_slug[2:]
         super(Post_categories, self).save()
+      """     
        #- добавление чпу 
        
        # + добавление sitemap  
