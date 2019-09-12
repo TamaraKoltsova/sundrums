@@ -1,4 +1,4 @@
-/* #B65928
+/* #dc6600
   Theme Name: BizPage
   Theme URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
   Author: BootstrapMade.com
@@ -26,7 +26,7 @@ body {
 
 
 a {
-  color: #B65928;
+  color: #dc6600;
   transition: 0.5s;
 }
 
@@ -52,7 +52,7 @@ h1, h2, h3, h4, h5, h6 {
 .back-to-top {
   position: fixed;
   display: none;
-  background: #B65928;
+  background: #dc6600;
   color: #fff;
   display: inline-block;
   width: 44px;
@@ -90,11 +90,11 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   transition: all 0.5s;
   z-index: 997;
-  background-color: #B65928;
+  background-color: #dc6600;
 }
 
 #header.header-scrolled {
-  background:#B65928 ;
+  background:#dc6600 ;
   padding: 20px 0;
   height: 72px;
   transition: all 0.5s;
@@ -123,7 +123,7 @@ h1, h2, h3, h4, h5, h6 {
 #header #logo h1 a, #header #logo h1 a:hover {
   color: #fff;
   padding-left: 10px;
-  border-left: 4px solid #B65928;
+  border-left: 4px solid #dc6600;
 }
 
 #header #logo img {
@@ -268,12 +268,12 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.5s;
   margin: 10px;
   color: #fff;
-  background: #B65928;
+  background: #dc6600;
 }
 
 #intro .btn-get-started:hover {
   background: #fff;
-  color: #B65928;
+  color: #dc6600;
 }
 
 /*--------------------------------------------------------------
@@ -367,7 +367,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu li:hover > a, .nav-menu > .menu-active > a {
-  color: #B65928;
+  color: #dc6600;
 }
 
 .nav-menu > li {
@@ -395,7 +395,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu ul li:hover > a {
-  color: #B65928;
+  color: #dc6600;
 }
 
 .nav-menu ul ul {
@@ -485,7 +485,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #mobile-nav ul .menu-has-children i.fa-chevron-up {
-  color: #B65928;
+  color: #dc6600;
 }
 
 #mobile-nav ul .menu-has-children li a {
@@ -493,7 +493,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #mobile-nav ul .menu-item-active {
-  color: #B65928;
+  color: #dc6600;
 }
 
 #mobile-body-overly {
@@ -552,7 +552,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   display: none;
   width: 40px;
   height: 3px;
-  background: #B65928;
+  background: #dc6600;
   bottom: 0;
   left: calc(50% - 20px);
 }
@@ -584,7 +584,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #featured-services i {
-  color: #B65928;
+  color: #dc6600;
   font-size: 48px;
   display: inline-block;
   line-height: 1;
@@ -601,7 +601,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #featured-services h4 a:hover {
-  color: #B65928;
+  color: #dc6600;
 }
 
 #featured-services p {
@@ -678,7 +678,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #about .about-col:hover i {
-  color: #B65928;
+  color: #dc6600;
 }
 
 #about .about-col h2 {
@@ -695,7 +695,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #about .about-col h2 a:hover {
-  color: #B65928;
+  color: #dc6600;
 }
 
 #about .about-col p {
@@ -723,7 +723,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #services .icon i {
-  color: #B65928;
+  color: #dc6600;
   font-size: 36px;
   line-height: 1;
   transition: 0.5s;
@@ -741,7 +741,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #services .box:hover .title a {
-  color: #B65928;
+  color: #dc6600;
 }
 
 #services .description {
@@ -785,8 +785,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #call-to-action .cta-btn:hover {
-  background: #B65928;
-  border: 2px solid #B65928;
+  background: #dc6600;
+  border: 2px solid #dc6600;
 }
 
 /* Call To Action Section
@@ -850,7 +850,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-weight: bold;
   font-size: 48px;
   display: block;
-  color: #B65928;
+  color: #dc6600;
 }
 
 #facts .counters p {
@@ -895,7 +895,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #portfolio #portfolio-flters li:hover, #portfolio #portfolio-flters li.filter-active {
-  background: #B65928;
+  background: #dc6600;
   color: #fff;
 }
 
@@ -952,7 +952,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #portfolio .portfolio-item figure .link-preview:hover, #portfolio .portfolio-item figure .link-details:hover {
-  background: #B65928;
+  background: #dc6600;
 }
 
 #portfolio .portfolio-item figure .link-preview:hover i, #portfolio .portfolio-item figure .link-details:hover i {
@@ -1000,7 +1000,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #portfolio .portfolio-item .portfolio-info h4 a:hover {
-  color: #B65928;
+  color: #dc6600;
 }
 
 #portfolio .portfolio-item .portfolio-info p {
@@ -1044,7 +1044,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #clients .owl-dot.active {
-  background-color: #B65928;
+  background-color: #dc6600;
 }
 
 /* Testimonials Section
@@ -1122,7 +1122,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #testimonials .owl-dot.active {
-  background-color: #B65928;
+  background-color: #dc6600;
 }
 
 /* Team Section
@@ -1192,7 +1192,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #team .member .social a:hover {
-  color: #B65928;
+  color: #dc6600;
 }
 
 #team .member .social i {
@@ -1215,7 +1215,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 48px;
   display: inline-block;
   margin-bottom: 10px;
-  color: #B65928;
+  color: #dc6600;
 }
 
 #contact .contact-info address, #contact .contact-info p {
@@ -1236,7 +1236,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #contact .contact-info a:hover {
-  color: #B65928;
+  color: #dc6600;
 }
 
 #contact .contact-address, #contact .contact-phone, #contact .contact-email {
@@ -1257,8 +1257,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #contact .form #sendmessage {
-  color: #B65928;
-  border: 1px solid #B65928;
+  color: #dc6600;
+  border: 1px solid #dc6600;
   display: none;
   text-align: center;
   padding: 15px;
@@ -1296,7 +1296,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #contact .form button[type="submit"] {
-  background: #B65928;
+  background: #dc6600;
   border: 0;
   padding: 10px 30px;
   color: #fff;
@@ -1335,7 +1335,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   letter-spacing: 3px;
-  border-left: 4px solid #B65928;
+  border-left: 4px solid #dc6600;
 }
 
 #footer .footer-top .footer-info p {
@@ -1362,7 +1362,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #B65928;
+  background: #dc6600;
   color: #fff;
 }
 
@@ -1389,7 +1389,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top h4::after {
-  background: #B65928;
+  background: #dc6600;
   width: 60px;
 }
 
@@ -1422,7 +1422,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top .footer-links ul a:hover {
-  color: #B65928;
+  color: #dc6600;
 }
 
 #footer .footer-top .footer-contact {
@@ -1444,7 +1444,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top .footer-newsletter input[type="submit"] {
-  background: #B65928;
+  background: #dc6600;
   border: 0;
   width: 35%;
   padding: 6px 0;
