@@ -141,6 +141,9 @@ def contact_page(request):
     description_meta = helful_information.objects.get(english_name = 'description')
     keywords_meta = helful_information.objects.get(english_name = 'keywords')
     title_meta = helful_information.objects.get(english_name = 'title')
+    adres = helful_information.objects.get(english_name = 'adres')
+    telefon = helful_information.objects.get(english_name = 'telefon')
+    email = helful_information.objects.get(english_name = 'email')
     return render(request, 'contact_page.html', locals())
 
 
