@@ -31,6 +31,7 @@ urlpatterns = [
    url(r'^sobytiia/$', views.tipe_posts_sobytiia, name='sobytiia'),
    url(r'^korporativnye-treningi/$', views.tipe_posts_korporativnye_treningi, name='korporativnye-treningi'),
    url(r'^shkola/$', views.tipe_posts_shkola, name='shkola'),
+   url(r'^FAQ/$', views.FAQ_page, name='FAQ'),
    #тестирую ссылки первого уровня
       #тестирую ссылки второго уровня
    url(r'^magazin/(?P<slug>.+)/$', views.one_post_simple, name='magazin'),
@@ -39,6 +40,7 @@ urlpatterns = [
    url(r'^sobytiia/(?P<slug>.+)/$', views.one_post_simple, name='sobytiia'),
    url(r'^korporativnye-treningi/(?P<slug>.+)/$', views.one_post_simple, name='korporativnye-treningi'),
    url(r'^shkola/(?P<slug>.+)/$', views.one_post_simple, name='shkola'),
+   url(r'^FAQ/(?P<slug>.+)/$', views.one_post_simple, name='FAQ'),
    #тестирую ссылки второго уровня
    url(r'^kursi/(?P<slug>.+)/', views.tipe_kurs_page, name='kursi'),
    #url(r'^product_page/(?P<product_id>\w+)/', views.tipe_product_page, name='product_page'),
