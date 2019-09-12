@@ -31,7 +31,7 @@ urlpatterns = [
    url(r'^sobytiia/$', views.tipe_posts_sobytiia, name='sobytiia'),
    url(r'^korporativnye-treningi/$', views.tipe_posts_korporativnye_treningi, name='korporativnye-treningi'),
    url(r'^shkola/$', views.tipe_posts_shkola, name='shkola'),
-   url(r'^FAQ/$', views.FAQ_page, name='FAQ'),
+   url(r'^FAQ/$', views.tipe_posts_FAQ_page, name='FAQ'),
    #тестирую ссылки первого уровня
       #тестирую ссылки второго уровня
    url(r'^magazin/(?P<slug>.+)/$', views.one_post_simple, name='magazin'),
