@@ -5,6 +5,8 @@ from  .models import *
 # обычная загрузка вида
 def index(request):
     boss_say = helful_information.objects.get(english_name = 'boss_say')
+    O_nas = helful_information.objects.get(english_name = 'O_nas')
+
     description_meta = helful_information.objects.get(english_name = 'description')
     keywords_meta = helful_information.objects.get(english_name = 'keywords')
     title_meta = helful_information.objects.get(english_name = 'title')
