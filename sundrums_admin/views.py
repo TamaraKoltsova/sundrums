@@ -65,7 +65,7 @@ def one_post_simple(request, slug):
     return render(request, 'one_post_simple.html', locals())#
     #
   
-
+"""
 def tipe_posts(request, post_id):
     adres = helful_information.objects.get(english_name = 'adres')
     telefon = helful_information.objects.get(english_name = 'telefon')
@@ -84,6 +84,7 @@ def tipe_posts(request, post_id):
     tipe_kurss = tipe_kurs.objects.filter(is_active=True)
     return render(request, 'tipe_posts.html', locals())#
     #
+"""
 
 
 def tipe_kurs_page(request, slug ):
