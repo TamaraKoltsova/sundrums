@@ -7,7 +7,7 @@ Disallow: /slider_images
 Disallow: /static 
 Allow: /templates
 
-Host: https://sundrums.ru
+Host: https://jember.ru
 Sitemap: https://sundrums.ru/sitemap.xml
 
 User-agent: Yandex
@@ -18,7 +18,7 @@ Disallow: /slider_images
 Disallow: /static 
 Allow: /templates
 
-Host: https://sundrums.ru
+Host: https://jember.ru
 Sitemap: https://sundrums.ru/sitemap.xml
 
 User-agent: Googlebot
@@ -30,8 +30,8 @@ Disallow: /slider_images
 Disallow: /static 
 Allow: /templates
 
-Host: https://sundrums.ru
-Sitemap: https://sundrums.ru/sitemap.xml
+Host: https://jembe.ru
+Sitemap: https://jembe.ru/sitemap.xml
 
 User-agent: AdsBot-Google
 Disallow:
